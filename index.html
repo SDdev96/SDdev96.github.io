@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOOTSTRAP CDN via jsDelivr -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- BOOTSTRAP CDN ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- AOS ANIMATIONS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- CUSTOM CSS -->
+    <style>
+      * {
+        cursor: default;
+      }
+
+      .navbar-nav > li > a,
+      .nav > li > a > span > i {
+        cursor: pointer;
+      }
+
+      .card-title {
+        box-shadow: -8px 7px 20px 0px rgba(89, 89, 89, 0.75) inset;
+        -webkit-box-shadow: -8px 7px 20px 0px rgba(89, 89, 89, 0.75) inset;
+        -moz-box-shadow: -8px 7px 20px 0px rgba(89, 89, 89, 0.75) inset;
+      }
+    </style>
+
+    <title>Salvatore D'Ambrosio portfolio</title>
+  </head>
+  <body class="bg-light">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-light fs-4">
+      <div class="container-md">
+        <!-- toggle button for mobile nav -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" style="cursor: pointer"></span>
+        </button>
+
+        <!-- navbar links -->
+        <div
+          class="collapse navbar-collapse justify-content-center align-center"
+          id="main-nav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#about-me" class="nav-link">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- script for navbar items  -->
+      <script>
+        const p_nav_items = document.querySelectorAll(".navbar-nav > li");
+        p_nav_items.forEach(function (item) {
+          item.classList.add("px-3");
+        });
+      </script>
+    </nav>
+
+    <!-- ABOUT ME -->
+    <section id="about-me" class="container-lg my-5 py-5">
+      <!-- about me -->
+      <div class="row justify-content-center align-items-center mb-5 pb-5">
+        <!-- first column -->
+        <div class="col-md text-center text-md-end">
+          <h1>
+            <div
+              class="display-1 fw-bold"
+              data-aos="zoom-out"
+              data-aos-easing="ease-in-sine"
+              data-aos-delay="200"
+            >
+              Salvatore D'Ambrosio
+            </div>
+            <div
+              class="display-3"
+              data-aos="zoom-out"
+              data-aos-easing="ease-in-sine"
+              data-aos-delay="300"
+            >
+              Computer Engeneer
+            </div>
+          </h1>
+          <h2>
+            <div
+              class="display-6 text-secondary"
+              data-aos="zoom-out"
+              data-aos-easing="ease-in-sine"
+              data-aos-delay="400"
+            >
+              Web Developer & Web Designer
+            </div>
+          </h2>
+          <blockquote
+            cite="kingdom hearts"
+            data-aos="zoom-out"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="500"
+          >
+            <p class="lead text-danger">"May your heart be your guiding key"</p>
+          </blockquote>
+          <button class="btn btn-outline-dark">Download CV</button>
+        </div>
+
+        <!-- second column -->
+        <div class="col-md-5 text-center d-none d-md-block">
+          <!-- tooltip -->
+          <!-- <span
+              class="rounded-circle"
+              data-bs-placement="bottom"
+              data-bs-toggle="tooltip"
+              title="Salvatore D'Ambrosio"
+            > -->
+          <img
+            src="./assets/img/foto-CV.jpg"
+            class="img-fluid rounded-circle shadow-lg rounded p-2"
+            alt="Salvatore D'Ambrosio"
+          />
+          <!-- </span> -->
+        </div>
+      </div>
+
+      <!-- description -->
+      <section id="description container-lg mb-5 pb-5">
+        <!-- first row -->
+        <div class="row justify-content-center align-items-center pb-5">
+          <div
+            class="col-md text-center text-md-start display-2 text-secondary"
+          >
+            <p
+              class="text-decoration-underline"
+              data-aos="fade-down"
+              data-aos-offset="100"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="500"
+            >
+              Hi There!
+            </p>
+          </div>
+          <p
+            class="col-md-7 text-center text-md-start fs-3 fw-light"
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="500"
+          >
+            My name is <span class="fw-normal">Salvatore D'Ambrosio</span> and I
+            graduate at University of Salerno with a degree in
+            <span class="fw-normal">Computer Engeneering</span>
+          </p>
+        </div>
+        <!-- second row -->
+        <div class="row justify-content-center align-items-center py-5">
+          <p
+            class="col-md text-center text-md-center fs-3 fw-light"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="500"
+          >
+            I have a strong Passion and Talent for
+            <span class="bg-secondary text-light rounded">programming</span> and
+            <span class="bg-warning rounded">videogames</span>. In particular, i
+            love
+            <span class="fs-2 text-danger fw-bold"
+              >Web Development & Design</span
+            >
+          </p>
+          <p
+            class="col-md text-center text-md-end fs-3 fw-light"
+            data-aos="fade-up"
+            data-aos-offset="250"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="500"
+          >
+            I'm a creative and motivated person and I'd love to keep growing and
+            i aim to be the <span class="display-4 fw-bold">best</span>
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="container-lg my-5 py-5">
+      <div class="container-lg shadow-lg bg-white rounded p-5">
+        <!-- HTML&CSS -->
+        <div class="mb-4">
+          <span class="fw-bolder fs-4">HTML&CSS</span>
+          <div class="progress" style="height: 25px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 90%"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              ariavaluemax="100"
+              data-aos="fade-right"
+            >
+              90%
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="mb-4">
+          <span class="fw-bolder fs-4">JavaScript</span>
+          <div class="progress" style="height: 25px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 85%"
+              aria-valuenow="80"
+              aria-valuemin="0"
+              ariavaluemax="100"
+              data-aos="fade-right"
+            >
+              85%
+            </div>
+          </div>
+        </div>
+
+        <!-- Java -->
+        <div class="mb-4">
+          <span class="fw-bolder fs-4">Java</span>
+          <div class="progress" style="height: 25px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 75%"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              ariavaluemax="100"
+              data-aos="fade-right"
+            >
+              75%
+            </div>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="mb-4">
+          <span class="fw-bolder fs-4">Python</span>
+          <div class="progress" style="height: 25px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 80%"
+              aria-valuenow="80"
+              aria-valuemin="0"
+              ariavaluemax="100"
+              data-aos="fade-right"
+            >
+              80%
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL -->
+        <div class="mb-4">
+          <span class="fw-bolder fs-4">SQL</span>
+          <div class="progress" style="height: 25px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 60%"
+              aria-valuenow="60"
+              aria-valuemin="0"
+              ariavaluemax="100"
+              data-aos="fade-right"
+            >
+              60%
+            </div>
+          </div>
+        </div>
+
+        <!-- C -->
+        <div class="mb-4">
+          <span class="fw-bolder fs-4">C</span>
+          <div class="progress" style="height: 25px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 50%"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              ariavaluemax="100"
+              data-aos="fade-right"
+            >
+              50%
+            </div>
+          </div>
+        </div>
+
+        <!-- Assembly -->
+        <div class="mb-4">
+          <span class="fw-bolder fs-4">Assembly</span>
+          <div class="progress" style="height: 25px">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 30%"
+              aria-valuenow="30"
+              aria-valuemin="0"
+              ariavaluemax="100"
+              data-aos="fade-right"
+            >
+              30%
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPERIENZE -->
+    <section id="experience" class="container-lg my-5 py-5">
+      <!-- tutoring -->
+      <div class="text-start ps-0 pb-5 mb-5">
+        <div class="row justify-content-center align-items-center pe-0">
+          <div class="col-2 fw-bold text-start ps-3">
+            <small>2018 - [in progress]</small>
+          </div>
+          <div class="col-10 display-2 pb-2 ps-0">Tutoring</div>
+        </div>
+        <p
+          class="lead fw-light fs-3 ps-5 ms-5 border-start border-info border-2"
+        >
+          In 2018 I started tutoring guys from middle school to university for
+          scientific subject such as math, physics and computer science. At
+          first at "Diversiamo", Salerno, then i kept on doing it privately.
+        </p>
+      </div>
+
+      <!-- private coach -->
+      <div class="text-start ps-0 pb-5 mb-5">
+        <div class="row justify-content-center align-items-center pe-0">
+          <div class="col-10 display-2 text-end pb-2 ps-0">Private coach</div>
+          <div class="col-2 fw-bold text-end pe-3">
+            <small>2018 - 2019</small>
+          </div>
+        </div>
+        <p
+          class="lead fw-light fs-3 pe-5 me-5 border-end border-info border-2 text-end"
+        >
+          Upon completition of my previous experience, i helped people and teams
+          to improve their mechanical and mental skills to the game
+        </p>
+      </div>
+
+      <!-- e-sport player -->
+      <div class="text-start ps-0 pb-5 mb-5">
+        <!-- tutoring -->
+        <div class="row justify-content-center align-items-center pe-0">
+          <div class="col-2 fw-bold text-start ps-3">
+            <small>2016 - 2019</small>
+          </div>
+          <div class="col-10 display-2 pb-2 ps-0">E-Sport player</div>
+        </div>
+        <p
+          class="lead fw-light fs-3 ps-5 ms-5 border-start border-info border-2"
+        >
+          Following my hobby for videogames, i started my semi-professional
+          career as an E-Sport player for few national and european teams in the
+          online game called Overwatch. During this experience i have improved
+          my english language and gained my leadership skill due to my role in
+          the team.
+        </p>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <!-- <div class="education"></div> -->
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container-lg my-5 py-5">
+      <!-- row 1 -->
+      <div
+        class="row justify-content-start align-items-center mb-5"
+        data-aos="fade-right"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500"
+      >
+        <!-- col 1 -->
+        <div class="col-md-9 text-center text-md-start">
+          <div class="card mb-3 shadow-lg">
+            <div class="row g-0">
+              <div class="col-md-4 bg-warning rounded-start">
+                <!-- <img src="..." class="img-fluid rounded-start" alt="..."/> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5
+                    class="card-title display-3 fw-bold bg-light rounded border p-3"
+                  >
+                    Spiderman Home
+                  </h5>
+                  <p class="card-text fs-3 fw-light">
+                    Team project for an
+                    <span class="bg-warning rounded fst-italic"
+                      >advertising website</span
+                    >
+                    for spiderman products and draw for bundle (<span
+                      class="fw-normal"
+                      >HTML5</span
+                    >, <span class="fw-normal">CSS3</span>,
+                    <span class="fw-normal">JS</span>,
+                    <span class="fw-normal">PHP</span>,
+                    <span class="fw-normal">PGSQL</span>)
+                  </p>
+                  <!-- <p class="card-text">
+                      <small class="text-muted"></small>
+                    </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <div
+        class="row justify-content-center align-items-center mb-5"
+        data-aos="zoom-in"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500"
+      >
+        <!-- col 1 -->
+        <div class="col-md-9 text-center text-md-start">
+          <div class="card mb-3 shadow-lg">
+            <div class="row g-0">
+              <div class="col-md-4 bg-danger rounded-start">
+                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5
+                    class="card-title display-5 fw-bold bg-light rounded border p-3"
+                  >
+                    Report INGV
+                  </h5>
+                  <p class="card-text fs-3 fw-light">
+                    <span class="bg-danger rounded"
+                      ><span class="fw-normal">JavaFX</span> application</span
+                    >
+                    using SceneBuilder, it shows and filters earthquakes from
+                    INGV .csv files
+                  </p>
+                  <!-- <p class="card-text">
+                      <small class="text-muted"></small>
+                    </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div
+        class="row justify-content-end align-items-center mb-5"
+        data-aos="fade-left"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500"
+      >
+        <!-- col 1 -->
+        <div class="col-md-9 text-center text-md-start">
+          <div class="card mb-3 shadow-lg">
+            <div class="row g-0">
+              <div class="col-md-4 bg-info rounded-start">
+                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5
+                    class="card-title display-5 fw-bold bg-light rounded border p-3"
+                  >
+                    Athletics
+                  </h5>
+                  <p class="card-text fs-3 fw-light">
+                    Design of <span class="bg-info rounded">DBMS</span> for
+                    World Championships in Athletics 2024, taking care of all
+                    the design aspects and scripting using
+                    <span class="fw-normal">PostgreSQL</span>
+                  </p>
+                  <!-- <p class="card-text">
+                      <small class="text-muted"></small>
+                    </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 4 -->
+      <div
+        class="row justify-content-start align-items-center mb-5"
+        data-aos="fade-right"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500"
+      >
+        <!-- col 1 -->
+        <div class="col-md-9 text-center text-md-start">
+          <div class="card mb-3 shadow-lg">
+            <div class="row g-0">
+              <div class="col-md-4 bg-secondary rounded-start">
+                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5
+                    class="card-title display-3 fw-bold bg-light rounded border p-3"
+                  >
+                    Portfolio Website
+                  </h5>
+                  <p class="card-text fs-3 fw-light">
+                    Ending project for Web Development course by Learnn (<span
+                      class="fw-normal"
+                      >HTML5</span
+                    >, <span class="fw-normal">CSS3</span>,
+                    <span class="fw-normal">JS</span>)
+                  </p>
+                  <!-- <p class="card-text">
+                      <small class="text-muted"></small>
+                    </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 5 -->
+      <div
+        class="row justify-content-center align-items-center mb-5"
+        data-aos="zoom-in"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500"
+      >
+        <!-- col 1 -->
+        <div class="col-md-9 text-center text-md-start">
+          <div class="card mb-3 shadow-lg">
+            <div class="row g-0">
+              <div class="col-md-4 bg-warning rounded-start">
+                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5
+                    class="card-title display-5 fw-bold bg-light rounded border p-3"
+                  >
+                    SensorKit
+                  </h5>
+                  <p class="card-text fs-3 fw-light">
+                    <span class="bg-warning rounded"
+                      ><span class="fw-normal">Java</span> application</span
+                    >
+                    , management of sensors for IoT applications
+                  </p>
+                  <!-- <p class="card-text">
+                      <small class="text-muted"></small>
+                    </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 6 -->
+      <div
+        class="row justify-content-end align-items-center"
+        data-aos="fade-left"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="500"
+      >
+        <!-- col 1 -->
+        <div class="col-md-9 text-center text-md-start">
+          <div class="card mb-3 shadow-lg">
+            <div class="row g-0">
+              <div class="col-md-4 bg-info rounded-start">
+                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5
+                    class="card-title display-5 fw-bold bg-light rounded border p-3"
+                  >
+                    IntelliCurtain
+                  </h5>
+                  <p class="card-text fs-3 fw-light">
+                    Iot team project aimed to build a
+                    <span class="bg-info rounded">smart curtain</span> for a
+                    smart house, using
+                    <span class="fw-normal">Mycropython</span>, the ESP32 chip
+                    and advanced I/O components. It included remote control
+                    using the Node-RED tool, MQTT protocol and a simple browser
+                    interface with Docker
+                  </p>
+                  <!-- <p class="card-text">
+                      <small class="text-muted"></small>
+                    </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- col 2 -->
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer id="contact" class="footer">
+      <div class="container-lg mt-5 pt-5">
+        <!-- personal -->
+        <div id="personal" class="text-center">
+          <div class="row justify-content-center align-items-center">
+            <div class="col lead">
+              <i class="bi bi-phone"></i>
+              +39 3384591601
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col lead">
+              <i class="bi bi-envelope"></i> sd.io@hotmail.com
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col lead">
+              <i class="bi bi-geo-alt"></i> Viale Paestum 2, Eboli (SA), Italy
+            </div>
+          </div>
+        </div>
+
+        <!-- social -->
+        <div id="social" class="pb-4 pt-3">
+          <ul class="nav justify-content-center">
+            <!-- facebook -->
+            <li class="nav-item">
+              <a href="https://www.facebook.com/salvo9624" class="nav-link">
+                <!-- tooltip -->
+                <span
+                  class="rounded-circle"
+                  data-bs-placement="bottom"
+                  data-bs-toggle="tooltip"
+                  title="facebook"
+                  ><i class="bi bi-facebook"></i
+                ></span>
+              </a>
+            </li>
+            <!-- instagram -->
+            <li class="nav-item">
+              <a
+                href="https://www.instagram.com/salvatoredambrosio/"
+                class="nav-link"
+              >
+                <!-- tooltip -->
+                <span
+                  class="rounded-circle"
+                  data-bs-placement="bottom"
+                  data-bs-toggle="tooltip"
+                  title="instagram"
+                  ><i class="bi bi-instagram"></i
+                ></span>
+              </a>
+            </li>
+            <!-- github -->
+            <li class="nav-item">
+              <a href="https://github.com/SDdev96" class="nav-link">
+                <!-- tooltip -->
+                <span
+                  class="rounded-circle"
+                  data-bs-placement="bottom"
+                  data-bs-toggle="tooltip"
+                  title="github"
+                  ><i class="bi bi-github"></i
+                ></span>
+              </a>
+            </li>
+            <!-- linkedin -->
+            <li class="nav-item">
+              <a
+                href="https://www.linkedin.com/in/salvatore-d-ambrosio-2b6bb227a/"
+                class="nav-link"
+              >
+                <!-- tooltip -->
+                <span
+                  class="rounded-circle"
+                  data-bs-placement="bottom"
+                  data-bs-toggle="tooltip"
+                  title="linkedin"
+                  ><i class="bi bi-linkedin"></i
+                ></span>
+              </a>
+            </li>
+            <!-- twitter
+            <li class="nav-item">
+              <a href="" class="nav-link text-muted" disabled
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </li> -->
+          </ul>
+        </div>
+
+        <!-- rights -->
+        <div class="text-small text-center pb-4">
+          <small class="text-muted"
+            >™ & © 2024 Tutti i diritti riservati.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOOTSTRAP CDN via jsDelivr (must stay at the bottom of the body)-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- TOOLTIP TRIGGER SCRIPT -->
+    <script>
+      // IMPORTANT: add the data-attribute "data-bs-toggle="tooltip" to the span surrending the tooltip
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+
+    <!-- AOS ANIMATION -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
