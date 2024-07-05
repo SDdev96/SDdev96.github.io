@@ -1,122 +1,122 @@
 :root {
-    --pcbValue: 4.72; /*equals to 1% of 472*/
-    --pcbValue1: 472;
+  --pcbValue: 4.72; /*equals to 1% of 472*/
+  /* --pcbValue1: 472;
     --pcbValue2: 472;
     --pcbValue3: 472;
+    --pcbValue3: 472; */
+}
+
+.cpb-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+
+  /* background-color: #e3edf7; */
+}
+
+.cpb-skill {
+  position: relative;
+
+  width: 160px;
+  height: 160px;
+  /* border: 1px solid red; */
+}
+
+.cpb-outer {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  /* border: 1px solid red; */
+
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.cpb-inner {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+
+  /* border: 1px solid black; */
+
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.cpb-number {
+  /* display: inline-block; */
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* border: 1px solid black; */
+}
+
+#svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472; /*complete circle*/
+  stroke-dashoffset: 472; /*this will animate the circle*/
+}
+
+#circle1 {
+  animation: anim1 1s ease-in-out forwards;
+}
+
+#circle2 {
+  animation: anim2 1s ease-in-out forwards;
+}
+
+#circle3 {
+  animation: anim3 1s ease-in-out forwards;
+}
+
+#circle4 {
+  animation: anim4 1s ease-in-out forwards;
+}
+
+@keyframes anim1 {
+  100% {
+    stroke-dashoffset: var(--pcbValue1);
   }
-  
-  .cpb-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    height: 100%;
-    width: 100%;
-  
-    /* background-color: #e3edf7; */
+}
+
+@keyframes anim2 {
+  100% {
+    stroke-dashoffset: var(--pcbValue2);
   }
-  
-  .cpb-skill {
-    position: relative;
-  
-    width: 160px;
-    height: 160px;
-    /* border: 1px solid red; */
+}
+
+@keyframes anim3 {
+  100% {
+    stroke-dashoffset: var(--pcbValue3);
   }
-  
-  .cpb-outer {
-    position: relative;
-  
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  
-    /* border: 1px solid red; */
-  
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-      -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes anim4 {
+  100% {
+    stroke-dashoffset: var(--pcbValue4);
   }
-  
-  .cpb-inner {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-    width: 75%;
-    height: 75%;
-    border-radius: 50%;
-  
-    /* border: 1px solid black; */
-  
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-      inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-      -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-      0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-  }
-  
-  .cpb-number {
-    /* display: inline-block; */
-  
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-    /* border: 1px solid black; */
-  }
-  
-  #svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  circle {
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472; /*complete circle*/
-    stroke-dashoffset: 472; /*this will animate the circle*/
-  }
-  
-  #circle1 {
-    animation: anim1 1s ease-in-out forwards;
-  }
-  
-  #circle2 {
-    animation: anim2 1s ease-in-out forwards;
-  }
-  
-  #circle3 {
-    animation: anim3 1s ease-in-out forwards;
-  }
-  
-  #circle4 {
-    animation: anim4 1s ease-in-out forwards;
-  }
-  
-  @keyframes anim1 {
-    100% {
-      stroke-dashoffset: var(--pcbValue1);
-    }
-  }
-  
-  @keyframes anim2 {
-    100% {
-      stroke-dashoffset: var(--pcbValue2);
-    }
-  }
-  
-  @keyframes anim3 {
-    100% {
-      stroke-dashoffset: var(--pcbValue3);
-    }
-  }
-  
-  @keyframes anim4 {
-    100% {
-      stroke-dashoffset: var(--pcbValue4);
-    }
-  }
-  
+}
