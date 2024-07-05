@@ -1,3 +1,4 @@
+/* @media screen and (min-width: 1023px) { */
 .button {
   width: 40px;
   height: 40px;
@@ -52,6 +53,7 @@
   color: white;
   transition-duration: 0.3s;
   font-size: 0px;
+  cursor: pointer;
 }
 
 .button:hover::before {
