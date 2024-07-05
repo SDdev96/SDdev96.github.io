@@ -1,9 +1,9 @@
 :root {
   --pcbValue: 4.72; /*equals to 1% of 472*/
-  /* --pcbValue1: 472;
-    --pcbValue2: 472;
-    --pcbValue3: 472;
-    --pcbValue3: 472; */
+  --pcbValue1: 118;
+    --pcbValue2: 94.4;
+    --pcbValue3: 0;
+    --pcbValue4: 165.2;
 }
 
 .cpb-container {
