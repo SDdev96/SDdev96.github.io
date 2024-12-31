@@ -1,30 +1,94 @@
-const numbers = document.getElementsByClassName("cpb-number");
-const circles = document.getElementsByTagName("circle");
+document.addEventListener("DOMContentLoaded", () => {
+  const skills = document.querySelectorAll(".cpb-skill");
 
-// Invece di fare il for con il push degli elementi nell'array vuoto, uso direttamente il metodo map
-const values = Array.from(numbers).map((value) =>
-  parseInt(value.dataset.cpbValue)
-);
-const durations = Array.from(numbers).map((value) =>
-  parseInt(value.dataset.cpbDuration)
-);
-const counters = Array.from(numbers).map(() => 0);
+  Array.from(skills).map((el) => {
+    el.querySelector(".cpb-number").innerText = "0%";
+  });
 
-// console.log(values);
-// console.log(durations);
-// console.log(counters);
+  const values = Array.from(skills).map((el) =>
+    parseInt(el.querySelector(".cpb-number").dataset.cpbValue)
+  );
+  const durations = Array.from(skills).map((el) =>
+    parseInt(el.querySelector(".cpb-number").dataset.cpbDuration)
+  );
+  const counters = Array.from(skills).map(() => 0);
+  const intervalIds = new Map(); // Mappa per gli interval di animazione
 
-for (let i = 0; i < numbers.length; i++) {
-  const intervalId = setInterval(() => {
-    if (counters[i] === values[i]) {
-      clearInterval(intervalId);
-    } else {
-      counters[i] += 1;
-      numbers[i].innerText = counters[i] + "%";
-      document.documentElement.style.setProperty(
-        `--pcbValue${intervalId}`,
-        472 - (472 / 100) * values[i]
-      );
+  // Funzione per avviare l'animazione in avanti
+  const animateForward = (index) => {
+    if (intervalIds.has(index)) return; // Evita duplicazioni
+
+    const intervalId = setInterval(() => {
+      if (counters[index] >= values[index]) {
+        clearInterval(intervalId);
+        intervalIds.delete(index);
+      } else {
+        counters[index]++;
+        updateUI(index, counters[index]);
+      }
+    }, (durations[index] * 50) / values[index]);
+
+    intervalIds.set(index, intervalId);
+  };
+
+  // Funzione per avviare l'animazione al contrario
+  const animateBackward = (index) => {
+    if (intervalIds.has(index)) return; // Evita duplicazioni
+
+    const intervalId = setInterval(() => {
+      if (counters[index] <= 0) {
+        clearInterval(intervalId);
+        intervalIds.delete(index);
+      } else {
+        counters[index]--;
+        updateUI(index, counters[index]);
+      }
+    }, (durations[index] * 50) / values[index]);
+
+    intervalIds.set(index, intervalId);
+  };
+
+  // Funzione per aggiornare l'interfaccia utente
+  const updateUI = (index, value) => {
+    const skill = skills[index];
+    const numberElement = skill.querySelector(".cpb-number");
+    const circle = skill.querySelector("circle");
+
+    numberElement.innerText = value + "%";
+    const strokeDashoffset = 472 - (472 / 100) * value;
+    circle.style.strokeDashoffset = strokeDashoffset;
+  };
+
+  // Crea l'observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const index = Array.from(skills).indexOf(entry.target);
+
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          // L'elemento è completamente visibile nella viewport
+          animateForward(index);
+        } else if (
+          !entry.isIntersecting &&
+          entry.boundingClientRect.bottom > window.innerHeight
+        ) {
+          // L'elemento è uscito completamente dalla parte inferiore della viewport
+          animateBackward(index);
+        }
+      });
+    },
+    {
+      threshold: [0.5, 1], // Osserva entrambi i valori di soglia
     }
-  }, durations[i]);
-}
+  );
+
+  // Aggiungi gli elementi da osservare
+  skills.forEach((skill) => observer.observe(skill));
+
+  // Imposta il valore iniziale degli stili per i cerchi
+  const circles = document.querySelectorAll("circle");
+  circles.forEach((circle) => {
+    circle.style.strokeDasharray = "472";
+    circle.style.strokeDashoffset = "472"; // Nasconde inizialmente il cerchio
+  });
+});

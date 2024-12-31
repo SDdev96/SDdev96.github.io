@@ -55,12 +55,6 @@
       a > i::before {
         cursor: pointer;
       }
-
-      .card-title {
-        box-shadow: -8px 7px 20px 0px rgba(89, 89, 89, 0.75) inset;
-        -webkit-box-shadow: -8px 7px 20px 0px rgba(89, 89, 89, 0.75) inset;
-        -moz-box-shadow: -8px 7px 20px 0px rgba(89, 89, 89, 0.75) inset;
-      }
     </style>
 
     <title>Salvatore D'Ambrosio portfolio</title>
@@ -449,7 +443,7 @@
                     <div
                       class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
                       role="progressbar"
-                      style="width: 60%"
+                      style="width: 75%"
                       aria-valuenow="60"
                       aria-valuemin="0"
                       ariavaluemax="100"
@@ -603,11 +597,7 @@
                 <div class="cpb-skill">
                   <div class="cpb-outer">
                     <div class="cpb-inner">
-                      <div
-                        class="cpb-number"
-                        data-cpb-duration="13"
-                        data-cpb-value="75"
-                      ></div>
+                      <div class="cpb-number" data-cpb-value="75"></div>
                     </div>
                   </div>
 
@@ -624,13 +614,7 @@
                         <stop offset="100%" stop-color="#673ab7" />
                       </linearGradient>
                     </defs>
-                    <circle
-                      id="circle1"
-                      cx="80"
-                      cy="80"
-                      r="70"
-                      stroke-linecap="round"
-                    />
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
                   </svg>
                 </div>
               </div>
@@ -644,11 +628,7 @@
                 <div class="cpb-skill">
                   <div class="cpb-outer">
                     <div class="cpb-inner">
-                      <div
-                        class="cpb-number"
-                        data-cpb-duration="12"
-                        data-cpb-value="80"
-                      ></div>
+                      <div class="cpb-number" data-cpb-value="80"></div>
                     </div>
                   </div>
 
@@ -665,13 +645,7 @@
                         <stop offset="100%" stop-color="#673ab7" />
                       </linearGradient>
                     </defs>
-                    <circle
-                      id="circle2"
-                      cx="80"
-                      cy="80"
-                      r="70"
-                      stroke-linecap="round"
-                    />
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
                   </svg>
                 </div>
               </div>
@@ -688,11 +662,7 @@
                 <div class="cpb-skill">
                   <div class="cpb-outer">
                     <div class="cpb-inner">
-                      <div
-                        class="cpb-number"
-                        data-cpb-duration="8"
-                        data-cpb-value="100"
-                      ></div>
+                      <div class="cpb-number" data-cpb-value="85"></div>
                     </div>
                   </div>
 
@@ -709,13 +679,7 @@
                         <stop offset="100%" stop-color="#673ab7" />
                       </linearGradient>
                     </defs>
-                    <circle
-                      id="circle3"
-                      cx="80"
-                      cy="80"
-                      r="70"
-                      stroke-linecap="round"
-                    />
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
                   </svg>
                 </div>
               </div>
@@ -728,11 +692,7 @@
                 <div class="cpb-skill">
                   <div class="cpb-outer">
                     <div class="cpb-inner">
-                      <div
-                        class="cpb-number"
-                        data-cpb-duration="15"
-                        data-cpb-value="65"
-                      ></div>
+                      <div class="cpb-number" data-cpb-value="65"></div>
                     </div>
                   </div>
 
@@ -749,13 +709,7 @@
                         <stop offset="100%" stop-color="#673ab7" />
                       </linearGradient>
                     </defs>
-                    <circle
-                      id="circle4"
-                      cx="80"
-                      cy="80"
-                      r="70"
-                      stroke-linecap="round"
-                    />
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
                   </svg>
                 </div>
               </div>
@@ -856,7 +810,7 @@
       >
         <!-- col 1 -->
         <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
+          <div class="card mb-3 shadow-lg position-relative">
             <div class="row g-0">
               <div class="col-md-4 bg-info rounded-start">
                 <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
@@ -868,6 +822,11 @@
                   >
                     Videogame reviews site
                   </h5>
+                  <p
+                    class="card-latest p-absolute fs-6 fw-bold rounded bg-success bg-gradient text-light d-inline position-absolute top-0 start-0 m-2"
+                  >
+                    <span class="p-2">My latest project!</span>
+                  </p>
                   <p class="card-text fs-3 fw-light">
                     Individual
                     <span class="bg-info rounded fw-normal">React project</span>
@@ -876,7 +835,8 @@
                     <span class="fst-italic">RAWG APIs</span> to fetch the
                     datas. It also uses
                     <span class="fw-normal">routing</span> library to move
-                    between pages,<span class="fw-normal">Material UI</span> and
+                    between pages,
+                    <span class="fw-normal">Material UI</span> and
                     <span class="fw-normal">antd</span> libraries for design.
                   </p>
                   <a
@@ -886,7 +846,7 @@
                     >Discover more</a
                   >
                   <!-- <p class="card-text">
-                      <small class="text-muted">dsadasd</small>
+                      <small class="text-danger">My latest project</small>
                     </p> -->
                 </div>
               </div>
