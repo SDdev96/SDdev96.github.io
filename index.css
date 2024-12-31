@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+.navbar-nav > li > a,
+.nav > li > a > span > i::before,
+a > i::before {
+  cursor: pointer;
+}

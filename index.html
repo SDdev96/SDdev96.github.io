@@ -39,23 +39,11 @@
     <link rel="stylesheet" href="./cpb/cpb.css" />
     <script defer src="./cpb/cpb.js"></script>
 
-    <!-- CUSTOM CSS -->
-    <style>
-      *,
-      *::before,
-      *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        cursor: default;
-      }
+    <!-- DEFAULT CSS -->
+    <link rel="stylesheet" href="./index.css" />
 
-      .navbar-nav > li > a,
-      .nav > li > a > span > i::before,
-      a > i::before {
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="./section-project/project.css" />
+    <script defer src="./section-project/project.js"></script>
 
     <title>Salvatore D'Ambrosio portfolio</title>
   </head>
@@ -905,270 +893,279 @@
         </div>
       </div>
 
-      <!-- row 3 -->
-      <div
-        class="row justify-content-center align-items-center mb-5"
-        data-aos="zoom-in"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
-            <div class="row g-0">
-              <div class="col-md-4 bg-danger rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-5 fw-bold bg-light rounded border p-3"
-                  >
-                    Report INGV
-                  </h5>
-                  <p class="card-text fs-3 fw-light">
-                    <span class="bg-danger rounded"
-                      ><span class="fw-normal">JavaFX</span> application</span
+      <div id="additionalProjects" class="projects-hidden">
+        <!-- row 3 -->
+        <div
+          class="row justify-content-center align-items-center mb-5"
+          data-aos="zoom-in"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
+        >
+          <!-- col 1 -->
+          <div class="col-md-9 text-center text-md-start">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4 bg-danger rounded-start">
+                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5
+                      class="card-title display-5 fw-bold bg-light rounded border p-3"
                     >
-                    using SceneBuilder, it shows and filters earthquakes from
-                    INGV .csv files
-                  </p>
-                  <a
-                    href="https://github.com/SDdev96/reportINGV"
-                    class="btn btn-outline-dark"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-muted"></small>
-                    </p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- row 4 -->
-      <div
-        class="row justify-content-end align-items-center mb-5"
-        data-aos="fade-left"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
-            <div class="row g-0">
-              <div class="col-md-4 bg-info rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-5 fw-bold bg-light rounded border p-3"
-                  >
-                    Athletics
-                  </h5>
-                  <p class="card-text fs-3 fw-light">
-                    Design of <span class="bg-info rounded">DBMS</span> for
-                    World Championships in Athletics 2024, taking care of all
-                    the design aspects and scripting using
-                    <span class="fw-normal">PostgreSQL</span>
-                  </p>
-                  <a
-                    href=""
-                    class="btn btn-outline-dark disabled"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-muted">dsadasd</small>
-                    </p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- row 5 -->
-      <div
-        class="row justify-content-start align-items-center mb-5"
-        data-aos="fade-right"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
-            <div class="row g-0">
-              <div class="col-md-4 bg-secondary rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-3 fw-bold bg-light rounded border p-3"
-                  >
-                    Portfolio Website
-                  </h5>
-                  <p class="card-text fs-3 fw-light">
-                    Ending project for Web Development course by Learnn (<span
-                      class="fw-normal"
-                      >HTML5</span
-                    >, <span class="fw-normal">CSS3</span>,
-                    <span class="fw-normal">JS</span>)
-                  </p>
-                  <a
-                    href="https://github.com/SDdev96/LearnnSite"
-                    class="btn btn-outline-dark"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-muted"></small>
-                    </p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- row 6 -->
-      <div
-        class="row justify-content-center align-items-center mb-5"
-        data-aos="zoom-in"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
-            <div class="row g-0">
-              <div class="col-md-4 bg-warning rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-5 fw-bold bg-light rounded border p-3"
-                  >
-                    SensorKit
-                  </h5>
-                  <p class="card-text fs-3 fw-light">
-                    <span class="bg-warning rounded"
-                      ><span class="fw-normal">Java</span> application</span
+                      Report INGV
+                    </h5>
+                    <p class="card-text fs-3 fw-light">
+                      <span class="bg-danger rounded"
+                        ><span class="fw-normal">JavaFX</span> application</span
+                      >
+                      using SceneBuilder, it shows and filters earthquakes from
+                      INGV .csv files
+                    </p>
+                    <a
+                      href="https://github.com/SDdev96/reportINGV"
+                      class="btn btn-outline-dark"
+                      target="_blank"
+                      >Discover more</a
                     >
-                    , management of sensors for IoT applications
-                  </p>
-                  <a
-                    href="https://github.com/SDdev96/sensorKit"
-                    class="btn btn-outline-dark"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-muted"></small>
-                    </p> -->
+                    <!-- <p class="card-text">
+                        <small class="text-muted"></small>
+                      </p> -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- row 7 -->
-      <div
-        class="row justify-content-end align-items-center mb-5"
-        data-aos="fade-left"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
-            <div class="row g-0">
-              <div class="col-md-4 bg-info rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-5 fw-bold bg-light rounded border p-3"
-                  >
-                    IntelliCurtain
-                  </h5>
-                  <p class="card-text fs-3 fw-light">
-                    Iot team project aimed to build a
-                    <span class="bg-info rounded">smart curtain</span> for a
-                    smart house, using
-                    <span class="fw-normal">Mycropython</span>, the ESP32 chip
-                    and advanced I/O components. It included remote control
-                    using the Node-RED tool, MQTT protocol and a simple browser
-                    interface with Docker
-                  </p>
-                  <a
-                    href="https://github.com/SDdev96/SmartCurtain"
-                    class="btn btn-outline-dark"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-muted"></small>
-                    </p> -->
+        <!-- row 4 -->
+        <div
+          class="row justify-content-end align-items-center mb-5"
+          data-aos="fade-left"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
+        >
+          <!-- col 1 -->
+          <div class="col-md-9 text-center text-md-start">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4 bg-info rounded-start">
+                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- row 8 -->
-      <div
-        class="row justify-content-start align-items-center mb-5"
-        data-aos="fade-right"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
-            <div class="row g-0">
-              <div class="col-md-4 bg-danger rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..."/> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-3 fw-bold bg-light rounded border p-3"
-                  >
-                    Tenzies Game
-                  </h5>
-                  <p class="card-text fs-3 fw-light">
-                    Local web game developed in
-                    <span class="fst-italic"
-                      >functional
-                      <span class="bg-danger rounded text-white"
-                        >React</span
-                      ></span
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5
+                      class="card-title display-5 fw-bold bg-light rounded border p-3"
                     >
-                  </p>
-                  <a
-                    href="https://github.com/SDdev96/tenzies-game"
-                    class="btn btn-outline-dark"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-muted"></small>
-                    </p> -->
+                      Athletics
+                    </h5>
+                    <p class="card-text fs-3 fw-light">
+                      Design of <span class="bg-info rounded">DBMS</span> for
+                      World Championships in Athletics 2024, taking care of all
+                      the design aspects and scripting using
+                      <span class="fw-normal">PostgreSQL</span>
+                    </p>
+                    <a
+                      href=""
+                      class="btn btn-outline-dark disabled"
+                      target="_blank"
+                      >Discover more</a
+                    >
+                    <!-- <p class="card-text">
+                        <small class="text-muted">dsadasd</small>
+                      </p> -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- row 5 -->
+        <div
+          class="row justify-content-start align-items-center mb-5"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
+        >
+          <!-- col 1 -->
+          <div class="col-md-9 text-center text-md-start">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4 bg-secondary rounded-start">
+                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5
+                      class="card-title display-3 fw-bold bg-light rounded border p-3"
+                    >
+                      Portfolio Website
+                    </h5>
+                    <p class="card-text fs-3 fw-light">
+                      Ending project for Web Development course by Learnn (<span
+                        class="fw-normal"
+                        >HTML5</span
+                      >, <span class="fw-normal">CSS3</span>,
+                      <span class="fw-normal">JS</span>)
+                    </p>
+                    <a
+                      href="https://github.com/SDdev96/LearnnSite"
+                      class="btn btn-outline-dark"
+                      target="_blank"
+                      >Discover more</a
+                    >
+                    <!-- <p class="card-text">
+                        <small class="text-muted"></small>
+                      </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row 6 -->
+        <div
+          class="row justify-content-center align-items-center mb-5"
+          data-aos="zoom-in"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
+        >
+          <!-- col 1 -->
+          <div class="col-md-9 text-center text-md-start">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4 bg-warning rounded-start">
+                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5
+                      class="card-title display-5 fw-bold bg-light rounded border p-3"
+                    >
+                      SensorKit
+                    </h5>
+                    <p class="card-text fs-3 fw-light">
+                      <span class="bg-warning rounded"
+                        ><span class="fw-normal">Java</span> application</span
+                      >
+                      , management of sensors for IoT applications
+                    </p>
+                    <a
+                      href="https://github.com/SDdev96/sensorKit"
+                      class="btn btn-outline-dark"
+                      target="_blank"
+                      >Discover more</a
+                    >
+                    <!-- <p class="card-text">
+                        <small class="text-muted"></small>
+                      </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row 7 -->
+        <div
+          class="row justify-content-end align-items-center mb-5"
+          data-aos="fade-left"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
+        >
+          <!-- col 1 -->
+          <div class="col-md-9 text-center text-md-start">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4 bg-info rounded-start">
+                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5
+                      class="card-title display-5 fw-bold bg-light rounded border p-3"
+                    >
+                      IntelliCurtain
+                    </h5>
+                    <p class="card-text fs-3 fw-light">
+                      Iot team project aimed to build a
+                      <span class="bg-info rounded">smart curtain</span> for a
+                      smart house, using
+                      <span class="fw-normal">Mycropython</span>, the ESP32 chip
+                      and advanced I/O components. It included remote control
+                      using the Node-RED tool, MQTT protocol and a simple
+                      browser interface with Docker
+                    </p>
+                    <a
+                      href="https://github.com/SDdev96/SmartCurtain"
+                      class="btn btn-outline-dark"
+                      target="_blank"
+                      >Discover more</a
+                    >
+                    <!-- <p class="card-text">
+                        <small class="text-muted"></small>
+                      </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row 8 -->
+        <div
+          class="row justify-content-start align-items-center mb-5"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="500"
+        >
+          <!-- col 1 -->
+          <div class="col-md-9 text-center text-md-start">
+            <div class="card mb-3 shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-4 bg-danger rounded-start">
+                  <!-- <img src="..." class="img-fluid rounded-start" alt="..."/> -->
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5
+                      class="card-title display-3 fw-bold bg-light rounded border p-3"
+                    >
+                      Tenzies Game
+                    </h5>
+                    <p class="card-text fs-3 fw-light">
+                      Local web game developed in
+                      <span class="fst-italic"
+                        >functional
+                        <span class="bg-danger rounded text-white"
+                          >React</span
+                        ></span
+                      >
+                    </p>
+                    <a
+                      href="https://github.com/SDdev96/tenzies-game"
+                      class="btn btn-outline-dark"
+                      target="_blank"
+                      >Discover more</a
+                    >
+                    <!-- <p class="card-text">
+                        <small class="text-muted"></small>
+                      </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- button to show more -->
+      <div class="text-center mb-5">
+        <button id="expandButton" class="btn btn-outline-dark">
+          Show more projects
+        </button>
       </div>
     </section>
 

@@ -1,0 +1,17 @@
+/* .projects-hidden {
+  display: none;
+} */
+
+#additionalProjects {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 2s ease-in-out;
+}
+
+#additionalProjects.show {
+  max-height: 4000px; /* Imposta un valore che copre la dimensione dei tuoi progetti */
+  opacity: 1;
+  visibility: visible;
+}
