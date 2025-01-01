@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  .border-md-end {
+    border-right: solid;
+  }
+  .border-md-start {
+    border-left: solid;
+  }
+}
+
+@media (max-width: 767px) {
+  .border-sm-bottom {
+    border-bottom: solid;
+  }
+}
