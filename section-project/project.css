@@ -1,17 +1,122 @@
-/* .projects-hidden {
-  display: none;
-} */
-
-#additionalProjects {
-  max-height: 0;
+.glide__arrows button {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #007bff;
   overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 2s ease-in-out;
+  border: none;
 }
 
-#additionalProjects.show {
-  max-height: 4000px; /* Imposta un valore che copre la dimensione dei tuoi progetti */
+.glide__arrows button:after {
+  position: absolute;
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #183153;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.glide__arrows button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.glide__arrows button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 8px 16px;
+  color: #fff;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.glide__arrows button:hover span {
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.glide__arrow:focus {
+  outline: none;
+}
+.glide__arrow--left {
+  left: 2em;
+}
+.glide__arrow--right {
+  right: 2em;
+}
+.glide__arrow--disabled {
+  opacity: 0.33;
+}
+
+.glide__slide {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.glide__slide--active {
+  border-radius: 8px;
+  transform: scale(1);
   opacity: 1;
-  visibility: visible;
+}
+
+/* Stile per le slide non attive */
+.glide__slide:not(.glide__slide--active) {
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+
+.card-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  border-radius: 4px 4px 0 0;
+}
+.card-image.project1 {
+  background-image: url("../assets/img/videogame-reviews-site.png");
+  background-position: top;
+}
+.card-image.project2 {
+  background-image: url("../assets/img/my-weather.png");
+  background-position: top;
+}
+.card-image.project3 {
+  background-image: url("../assets/img/spiderman-home.png");
+}
+.card-image.project4 {
+  background-image: url("../assets/img/report-ingv.png");
+}
+.card-image.project5 {
+  background-image: url("");
+}
+.card-image.project6 {
+  background-image: url("../assets/img/sensorkit.png");
+}
+.card-image.project7 {
+  background-image: url("../assets/img/intellicurtain.png");
+}
+.card-image.project8 {
+  background-image: url("../assets/img/portfolio.png");
+}
+.card-image.project9 {
+  background-image: url("../assets/img/tenzies-game.png");
+  background-position: top;
 }

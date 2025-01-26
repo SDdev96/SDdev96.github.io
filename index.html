@@ -42,12 +42,27 @@
     <!-- DEFAULT CSS -->
     <link rel="stylesheet" href="./index.css" />
 
-    <!-- PROJECTS -->
-    <link rel="stylesheet" href="./section-project/project.css" />
-    <script defer src="./section-project/project.js"></script>
-
     <!-- EXPERIENCES -->
     <link rel="stylesheet" href="./section-experiences/experiences.css" />
+
+    <!-- PROJECTS -->
+    <!-- Foglio di stile core -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+
+    <!-- Foglio di stile tema (optional) -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
+    /> -->
+
+    <!-- Script JS di Glide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+
+    <link rel="stylesheet" href="./section-project/project.css" />
+    <script defer src="./section-project/project.js"></script>
 
     <title>Salvatore D'Ambrosio portfolio</title>
   </head>
@@ -103,649 +118,745 @@
     </nav>
 
     <!-- ABOUT ME -->
-    <section id="about-me" class="container-lg my-5 py-5">
-      <!-- about me -->
-      <div class="row justify-content-center align-items-center mb-5 pb-5">
-        <!-- first column -->
-        <div class="col-md-5 text-center col-7 d-md-block">
-          <!-- tooltip -->
-          <!-- <span
-              class="rounded-circle"
-              data-bs-placement="bottom"
-              data-bs-toggle="tooltip"
-              title="Salvatore D'Ambrosio"
-            > -->
-          <img
-            src="./assets/img/foto-CV.jpg"
-            class="img-fluid rounded-circle shadow-lg rounded p-2"
-            alt="Salvatore D'Ambrosio"
-          />
-          <!-- </span> -->
+    <section id="about-me">
+      <div class="container-lg my-5 py-5">
+        <!-- about me -->
+        <div class="row justify-content-center align-items-center mb-5 pb-5">
+          <!-- first column -->
+          <div class="col-md-5 text-center col-7 d-md-block">
+            <!-- tooltip -->
+            <!-- <span
+                 class="rounded-circle"
+                 data-bs-placement="bottom"
+                 data-bs-toggle="tooltip"
+                 title="Salvatore D'Ambrosio"
+               > -->
+            <img
+              src="./assets/img/foto-CV.jpg"
+              class="img-fluid rounded-circle shadow-lg rounded p-2"
+              alt="Salvatore D'Ambrosio"
+            />
+            <!-- </span> -->
+          </div>
+          <!-- second column -->
+          <div class="col-md text-center text-md-start">
+            <h1>
+              <div
+                class="display-1 fw-bold"
+                data-aos="zoom-out"
+                data-aos-easing="ease-in-sine"
+                data-aos-delay="200"
+              >
+                Salvatore D'Ambrosio
+              </div>
+              <div
+                class="display-3"
+                data-aos="zoom-out"
+                data-aos-easing="ease-in-sine"
+                data-aos-delay="300"
+              >
+                Computer Engineer
+              </div>
+            </h1>
+            <h2>
+              <div
+                class="display-6 text-secondary"
+                data-aos="zoom-out"
+                data-aos-easing="ease-in-sine"
+                data-aos-delay="400"
+              >
+                Fullstack developer
+              </div>
+            </h2>
+            <blockquote
+              cite="kingdom hearts"
+              data-aos="zoom-out"
+              data-aos-offset="50"
+              data-aos-easing="ease-in-sine"
+              data-aos-delay="500"
+            >
+              <p class="lead text-danger">
+                "May your heart be your guiding key"
+              </p>
+            </blockquote>
+            <a
+              href="./assets/doc/Salvatore-D'Ambrosio-CV.pdf"
+              class="btn btn-outline-dark"
+              target="_blank"
+            >
+              <i class="fa-solid fa-download"></i>
+              Download CV
+            </a>
+            <a href="#contact" class="btn btn-dark">
+              <i class="fa-solid fa-arrow-down-long"></i>
+              Contacts
+            </a>
+          </div>
         </div>
-        <!-- second column -->
-        <div class="col-md text-center text-md-start">
-          <h1>
-            <div
-              class="display-1 fw-bold"
-              data-aos="zoom-out"
-              data-aos-easing="ease-in-sine"
-              data-aos-delay="200"
-            >
-              Salvatore D'Ambrosio
-            </div>
-            <div
-              class="display-3"
-              data-aos="zoom-out"
-              data-aos-easing="ease-in-sine"
-              data-aos-delay="300"
-            >
-              Computer Engineer
-            </div>
-          </h1>
-          <h2>
-            <div
-              class="display-6 text-secondary"
-              data-aos="zoom-out"
-              data-aos-easing="ease-in-sine"
-              data-aos-delay="400"
-            >
-              Fullstack developer
-            </div>
-          </h2>
-          <blockquote
-            cite="kingdom hearts"
-            data-aos="zoom-out"
-            data-aos-offset="50"
-            data-aos-easing="ease-in-sine"
-            data-aos-delay="500"
-          >
-            <p class="lead text-danger">"May your heart be your guiding key"</p>
-          </blockquote>
-          <a
-            href="./assets/doc/Salvatore-D'Ambrosio-CV.pdf"
-            class="btn btn-outline-dark"
-            target="_blank"
-          >
-            <i class="fa-solid fa-download"></i>
-            Download CV
-          </a>
-          <a href="#contact" class="btn btn-dark">
-            <i class="fa-solid fa-arrow-down-long"></i>
-            Contacts
-          </a>
-        </div>
-      </div>
 
-      <!-- description -->
-      <section id="description container-lg mb-5 pb-5">
-        <!-- first row -->
-        <div class="row justify-content-center align-items-center pb-5">
-          <div
-            class="col-md text-center text-md-start display-2 text-secondary"
-          >
+        <!-- description -->
+        <div id="description">
+          <!-- first row -->
+          <div class="row justify-content-center align-items-center pb-5">
+            <div
+              class="col-md text-center text-md-start display-2 text-secondary"
+            >
+              <p
+                class="text-decoration-underline"
+                data-aos="fade-down"
+                data-aos-offset="100"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="500"
+              >
+                Hi There!
+              </p>
+            </div>
             <p
-              class="text-decoration-underline"
-              data-aos="fade-down"
-              data-aos-offset="100"
+              class="col-md-7 text-center text-md-start fs-3 fw-light"
+              data-aos="fade-left"
+              data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="500"
             >
-              Hi There!
+              My name is <span class="fw-normal">Salvatore D'Ambrosio</span> and
+              I graduate at University of Salerno with a degree in
+              <span class="fw-normal">Computer Engineering</span>
             </p>
           </div>
-          <p
-            class="col-md-7 text-center text-md-start fs-3 fw-light"
-            data-aos="fade-left"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="500"
-          >
-            My name is <span class="fw-normal">Salvatore D'Ambrosio</span> and I
-            graduate at University of Salerno with a degree in
-            <span class="fw-normal">Computer Engineering</span>
-          </p>
-        </div>
-        <!-- second row -->
-        <div class="row justify-content-center align-items-center py-5">
-          <p
-            class="col-md text-center text-md-center fs-3 fw-light"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="500"
-          >
-            I have a strong Passion and Talent for
-            <span class="bg-secondary text-light rounded">programming</span> and
-            <span class="bg-warning rounded">videogames</span>. In particular, i
-            love
-            <span class="fs-2 text-danger fw-bold"
-              >Web Development & Design</span
+          <!-- second row -->
+          <div class="row justify-content-center align-items-center py-5">
+            <p
+              class="col-md text-center text-md-center fs-3 fw-light"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="500"
             >
-          </p>
-          <p
-            class="col-md text-center text-md-end fs-3 fw-light"
-            data-aos="fade-up"
-            data-aos-offset="250"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="500"
-          >
-            I'm a creative and motivated person and I'd love to keep growing and
-            i aim to be the <span class="display-4 fw-bold">best</span>
-          </p>
+              I have a strong Passion and Talent for
+              <span class="bg-secondary text-light rounded">programming</span>
+              and <span class="bg-warning rounded">videogames</span>. In
+              particular, i love
+              <span class="fs-2 text-danger fw-bold"
+                >Web Development & Design</span
+              >
+            </p>
+            <p
+              class="col-md text-center text-md-end fs-3 fw-light"
+              data-aos="fade-up"
+              data-aos-offset="250"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="500"
+            >
+              I'm a creative and motivated person and I'd love to keep growing
+              and i aim to be the <span class="display-4 fw-bold">best</span>
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="container-lg my-5 py-5">
-      <div class="container-lg shadow-lg bg-white rounded p-5">
-        <!-- tecnical skills -->
-        <div class="tecnical-skills pb-5">
-          <!-- HTML&CSS -->
-          <div class="mb-1 pt-5">
-            <span class="fw-bolder fs-4">
-              <i
-                class="fa-brands fa-html5"
-                style="color: rgba(228, 77, 38, 255)"
-              ></i>
-              <i
-                class="fa-brands fa-css3-alt"
-                style="color: rgba(21, 114, 182, 255)"
-              ></i>
-              HTML&CSS</span
-            >
-            <div class="progress" style="height: 25px">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 90%"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
+    <section id="skills">
+      <div class="container-lg my-5 py-5">
+        <div class="container-lg shadow-lg bg-white rounded p-5">
+          <!-- tecnical skills -->
+          <div class="tecnical-skills pb-5">
+            <!-- HTML&CSS -->
+            <div class="mb-1 pt-5">
+              <span class="fw-bolder fs-4">
+                <i
+                  class="fa-brands fa-html5"
+                  style="color: rgba(228, 77, 38, 255)"
+                ></i>
+                <i
+                  class="fa-brands fa-css3-alt"
+                  style="color: rgba(21, 114, 182, 255)"
+                ></i>
+                HTML&CSS</span
               >
-                90%
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 90%"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  90%
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- HTML&CSS FRAMEWORKS -->
-          <div class="frameworks mb-4">
-            <!-- bootstrap -->
-            <div class="framework">
-              <div class="row justify-content-center align-items-center">
+            <!-- HTML&CSS FRAMEWORKS -->
+            <div class="frameworks mb-4">
+              <!-- bootstrap -->
+              <div class="framework">
+                <div class="row justify-content-center align-items-center">
+                  <!-- col 1 -->
+                  <div class="col-3 text-end pe-0">
+                    <!-- tooltip -->
+                    <span
+                      class="rounded-circle"
+                      data-bs-placement="left"
+                      data-bs-toggle="tooltip"
+                      title="bootstrap"
+                      ><i
+                        class="fa-brands fa-bootstrap mx-2 fa-xl"
+                        style="color: rgba(76, 11, 206, 255)"
+                      ></i
+                    ></span>
+                  </div>
+
+                  <!-- col 2 -->
+                  <div class="col-9">
+                    <div class="progress" style="height: 18px">
+                      <div
+                        class="progress-bar bg-warning text-dark"
+                        role="progressbar"
+                        style="width: 95%"
+                        aria-valuenow="95"
+                        aria-valuemin="0"
+                        ariavaluemax="100"
+                        data-aos="fade-right"
+                      >
+                        master
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- tailwind -->
+              <div class="framework">
                 <!-- col 1 -->
-                <div class="col-3 text-end pe-0">
-                  <!-- tooltip -->
-                  <span
-                    class="rounded-circle"
-                    data-bs-placement="left"
-                    data-bs-toggle="tooltip"
-                    title="bootstrap"
-                    ><i
-                      class="fa-brands fa-bootstrap mx-2 fa-xl"
-                      style="color: rgba(76, 11, 206, 255)"
-                    ></i
-                  ></span>
-                </div>
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-end pe-0">
+                    <!-- tooltip -->
+                    <span
+                      class="rounded-circle"
+                      data-bs-placement="left"
+                      data-bs-toggle="tooltip"
+                      title="tailwind"
+                      ><i class="fa-brands mx-2 fa-xl"
+                        ><img
+                          src="./assets/img/tailwind.svg"
+                          width="30px"
+                          alt="tailwind" /></i
+                    ></span>
+                  </div>
 
-                <!-- col 2 -->
-                <div class="col-9">
-                  <div class="progress" style="height: 18px">
-                    <div
-                      class="progress-bar bg-warning text-dark"
-                      role="progressbar"
-                      style="width: 95%"
-                      aria-valuenow="95"
-                      aria-valuemin="0"
-                      ariavaluemax="100"
-                      data-aos="fade-right"
+                  <!-- col 2 -->
+                  <div class="col-9">
+                    <div class="progress" style="height: 18px">
+                      <div
+                        class="progress-bar bg-warning text-dark"
+                        role="progressbar"
+                        style="width: 65%"
+                        aria-valuenow="65"
+                        aria-valuemin="0"
+                        ariavaluemax="100"
+                        data-aos="fade-right"
+                      >
+                        advanced
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- scss -->
+              <div class="framework">
+                <div class="row justify-content-center align-items-center">
+                  <!-- col 1 -->
+                  <div class="col-3 text-end pe-0">
+                    <!-- tooltip -->
+                    <span
+                      class="rounded-circle"
+                      data-bs-placement="left"
+                      data-bs-toggle="tooltip"
+                      title="sass"
                     >
-                      master
+                      <i
+                        class="fa-brands fa-sass mx-2 fa-xl"
+                        style="color: rgba(205, 103, 153, 255)"
+                      ></i>
+                    </span>
+                  </div>
+
+                  <!-- col 2 -->
+                  <div class="col-9">
+                    <div class="progress" style="height: 18px">
+                      <div
+                        class="progress-bar bg-warning text-dark"
+                        role="progressbar"
+                        style="width: 30%"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        ariavaluemax="100"
+                        data-aos="fade-right"
+                      >
+                        basic
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- tailwind -->
-            <div class="framework">
-              <!-- col 1 -->
-              <div class="row justify-content-center align-items-center">
-                <div class="col-3 text-end pe-0">
-                  <!-- tooltip -->
-                  <span
-                    class="rounded-circle"
-                    data-bs-placement="left"
-                    data-bs-toggle="tooltip"
-                    title="tailwind"
-                    ><i class="fa-brands mx-2 fa-xl"
-                      ><img
-                        src="./assets/img/tailwind.svg"
-                        width="30px"
-                        alt="tailwind" /></i
-                  ></span>
-                </div>
-
-                <!-- col 2 -->
-                <div class="col-9">
-                  <div class="progress" style="height: 18px">
-                    <div
-                      class="progress-bar bg-warning text-dark"
-                      role="progressbar"
-                      style="width: 65%"
-                      aria-valuenow="65"
-                      aria-valuemin="0"
-                      ariavaluemax="100"
-                      data-aos="fade-right"
-                    >
-                      advanced
-                    </div>
-                  </div>
+            <!-- JavaScript -->
+            <div class="mb-1">
+              <span class="fw-bolder fs-4">
+                <i
+                  class="fa-brands fa-js"
+                  style="color: rgba(247, 224, 24, 255)"
+                ></i>
+                JavaScript</span
+              >
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 85%"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  85%
                 </div>
               </div>
             </div>
 
-            <!-- scss -->
-            <div class="framework">
-              <div class="row justify-content-center align-items-center">
+            <!-- JS FRAMEWORKS -->
+            <div class="frameworks mb-4">
+              <!-- react -->
+              <div class="framework">
                 <!-- col 1 -->
-                <div class="col-3 text-end pe-0">
-                  <!-- tooltip -->
-                  <span
-                    class="rounded-circle"
-                    data-bs-placement="left"
-                    data-bs-toggle="tooltip"
-                    title="sass"
-                  >
-                    <i
-                      class="fa-brands fa-sass mx-2 fa-xl"
-                      style="color: rgba(205, 103, 153, 255)"
-                    ></i>
-                  </span>
-                </div>
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-end pe-0">
+                    <!-- tooltip -->
+                    <span
+                      class="rounded-circle"
+                      data-bs-placement="left"
+                      data-bs-toggle="tooltip"
+                      title="react"
+                      ><i
+                        class="fa-brands fa-react mx-2 fa-xl"
+                        style="color: rgba(97, 219, 251, 255)"
+                      ></i
+                    ></span>
+                  </div>
 
-                <!-- col 2 -->
-                <div class="col-9">
-                  <div class="progress" style="height: 18px">
-                    <div
-                      class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
-                      role="progressbar"
-                      style="width: 75%"
-                      aria-valuenow="75"
-                      aria-valuemin="0"
-                      ariavaluemax="100"
-                      data-aos="fade-right"
-                    >
-                      in progress...
+                  <!-- col 2 -->
+                  <div class="col-9">
+                    <div class="progress" style="height: 18px">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
+                        role="progressbar"
+                        style="width: 75%"
+                        aria-valuenow="60"
+                        aria-valuemin="0"
+                        ariavaluemax="100"
+                        data-aos="fade-right"
+                      >
+                        in progress...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- vue -->
+              <div class="framework">
+                <!-- col 1 -->
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-end pe-0">
+                    <!-- tooltip -->
+                    <span
+                      class="rounded-circle"
+                      data-bs-placement="left"
+                      data-bs-toggle="tooltip"
+                      title="vue"
+                      ><i
+                        class="fa-brands fa-vuejs mx-2 fa-xl"
+                        style="color: #41b883"
+                      ></i
+                    ></span>
+                  </div>
+
+                  <!-- col 2 -->
+                  <div class="col-9">
+                    <div class="progress" style="height: 18px">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
+                        role="progressbar"
+                        style="width: 35%"
+                        aria-valuenow="60"
+                        aria-valuemin="0"
+                        ariavaluemax="100"
+                        data-aos="fade-right"
+                      >
+                        in progress...
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- JavaScript -->
-          <div class="mb-1">
-            <span class="fw-bolder fs-4">
-              <i
-                class="fa-brands fa-js"
-                style="color: rgba(247, 224, 24, 255)"
-              ></i>
-              JavaScript</span
-            >
-            <div class="progress" style="height: 25px">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 85%"
-                aria-valuenow="80"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
+            <!-- Java -->
+            <div class="mb-1">
+              <span class="fw-bolder fs-4">
+                <i
+                  class="fa-brands fa-java"
+                  style="color: rgba(2, 118, 145, 255)"
+                ></i>
+                Java</span
               >
-                85%
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 80%"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  80%
+                </div>
+              </div>
+            </div>
+
+            <!-- JAVA FRAMEWORKS -->
+            <div class="frameworks mb-4">
+              <!-- java spring -->
+              <div class="framework">
+                <!-- col 1 -->
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-end pe-0">
+                    <!-- tooltip -->
+                    <span
+                      class="rounded-circle"
+                      data-bs-placement="left"
+                      data-bs-toggle="tooltip"
+                      title="java spring"
+                      ><i class="fa-brands fa-xl mx-2"
+                        ><img
+                          src="./assets/img/java-spring.svg"
+                          width="20px"
+                          alt="java spring" /></i
+                    ></span>
+                  </div>
+
+                  <!-- col 2 -->
+                  <div class="col-9">
+                    <div class="progress" style="height: 18px">
+                      <div
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
+                        role="progressbar"
+                        style="width: 65%"
+                        aria-valuenow="65"
+                        aria-valuemin="0"
+                        ariavaluemax="100"
+                        data-aos="fade-right"
+                      >
+                        in progress
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PHP -->
+            <div class="mb-4">
+              <span class="fw-bolder fs-4">
+                <i
+                  class="fa-brands fa-php"
+                  style="color: rgba(120, 124, 180, 255)"
+                ></i>
+                PHP</span
+              >
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 70%"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+
+            <!-- Python -->
+            <div class="mb-4">
+              <span class="fw-bolder fs-4">
+                <i
+                  class="fa-brands fa-python"
+                  style="color: rgba(87, 124, 170, 255)"
+                ></i>
+                Python</span
+              >
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 75%"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  75%
+                </div>
+              </div>
+            </div>
+
+            <!-- SQL -->
+            <div class="mb-1">
+              <span class="fw-bolder fs-4">
+                <i class="fa-solid fa-database"></i> SQL</span
+              >
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 70%"
+                  aria-valuenow="60"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
+
+            <!-- SQL FRAMEWORKS -->
+            <div class="frameworks mb-4">
+              <!-- postgresql -->
+              <div class="framework">
+                <!-- col 1 -->
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-3 text-end pe-0">
+                    <!-- tooltip -->
+                    <span
+                      class="rounded-circle"
+                      data-bs-placement="left"
+                      data-bs-toggle="tooltip"
+                      title="postgresql"
+                      ><i class="fa-brands fa-xl mx-2"
+                        ><img
+                          src="./assets/img/postgresql.png"
+                          width="20px"
+                          alt="postgresql" /></i
+                    ></span>
+                  </div>
+
+                  <!-- col 2 -->
+                  <div class="col-9">
+                    <div class="progress" style="height: 18px">
+                      <div
+                        class="progress-bar bg-warning text-dark"
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        ariavaluemax="100"
+                        data-aos="fade-right"
+                      >
+                        advanced
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- C -->
+            <div class="mb-4">
+              <span class="fw-bolder fs-4">C</span>
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 50%"
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  50%
+                </div>
+              </div>
+            </div>
+
+            <!-- Assembly -->
+            <div class="mb-4">
+              <span class="fw-bolder fs-4">Assembly</span>
+              <div class="progress" style="height: 25px">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 30%"
+                  aria-valuenow="30"
+                  aria-valuemin="0"
+                  ariavaluemax="100"
+                  data-aos="fade-right"
+                >
+                  30%
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- JS FRAMEWORKS -->
-          <div class="frameworks mb-4">
-            <!-- react -->
-            <div class="framework">
+          <!-- soft skills -->
+          <div class="soft-skills">
+            <!-- row 1 -->
+            <div class="row justify-content-center align-items-center">
               <!-- col 1 -->
-              <div class="row justify-content-center align-items-center">
-                <div class="col-3 text-end pe-0">
-                  <!-- tooltip -->
-                  <span
-                    class="rounded-circle"
-                    data-bs-placement="left"
-                    data-bs-toggle="tooltip"
-                    title="react"
-                    ><i
-                      class="fa-brands fa-react mx-2 fa-xl"
-                      style="color: rgba(97, 219, 251, 255)"
-                    ></i
-                  ></span>
-                </div>
-
-                <!-- col 2 -->
-                <div class="col-9">
-                  <div class="progress" style="height: 18px">
-                    <div
-                      class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
-                      role="progressbar"
-                      style="width: 75%"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      ariavaluemax="100"
-                      data-aos="fade-right"
-                    >
-                      in progress...
+              <div
+                class="col-md-6 text-center text-md-center fs-3 fw-light py-5"
+              >
+                <!-- pcb 1 -->
+                <div class="cpb-container">
+                  <div class="cpb-skill">
+                    <div class="cpb-outer">
+                      <div class="cpb-inner">
+                        <div class="cpb-number" data-cpb-value="75"></div>
+                      </div>
                     </div>
+
+                    <svg
+                      id="svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      width="160px"
+                      height="160px"
+                    >
+                      <defs>
+                        <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                      </defs>
+                      <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
                   </div>
                 </div>
+                <p class="fw-bold fs-4">Leadership</p>
+              </div>
+
+              <!-- col 2 -->
+              <div
+                class="col-md-6 text-center text-md-center fs-3 fw-light py-5"
+              >
+                <!-- pcb 2 -->
+                <div class="cpb-container">
+                  <div class="cpb-skill">
+                    <div class="cpb-outer">
+                      <div class="cpb-inner">
+                        <div class="cpb-number" data-cpb-value="80"></div>
+                      </div>
+                    </div>
+
+                    <svg
+                      id="svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      width="160px"
+                      height="160px"
+                    >
+                      <defs>
+                        <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                      </defs>
+                      <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                </div>
+                <p class="fw-bold fs-4">Problem solving</p>
               </div>
             </div>
 
-            <!-- vue -->
-            <div class="framework">
+            <!-- row 2 -->
+            <div class="row justify-content-center align-items-center">
               <!-- col 1 -->
-              <div class="row justify-content-center align-items-center">
-                <div class="col-3 text-end pe-0">
-                  <!-- tooltip -->
-                  <span
-                    class="rounded-circle"
-                    data-bs-placement="left"
-                    data-bs-toggle="tooltip"
-                    title="vue"
-                    ><i
-                      class="fa-brands fa-vuejs mx-2 fa-xl"
-                      style="color: #41b883"
-                    ></i
-                  ></span>
-                </div>
+              <div
+                class="col-md-6 text-center text-md-center fs-3 fw-light py-5"
+              >
+                <!-- pcb 3 -->
+                <div class="cpb-container">
+                  <div class="cpb-skill">
+                    <div class="cpb-outer">
+                      <div class="cpb-inner">
+                        <div class="cpb-number" data-cpb-value="85"></div>
+                      </div>
+                    </div>
 
-                <!-- col 2 -->
-                <div class="col-9">
-                  <div class="progress" style="height: 18px">
-                    <div
-                      class="progress-bar progress-bar-striped progress-bar-animated bg-warning text-dark"
-                      role="progressbar"
-                      style="width: 35%"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      ariavaluemax="100"
-                      data-aos="fade-right"
+                    <svg
+                      id="svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      width="160px"
+                      height="160px"
                     >
-                      in progress...
-                    </div>
+                      <defs>
+                        <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                      </defs>
+                      <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
                   </div>
                 </div>
+                <p class="fw-bold fs-4">Creativity</p>
               </div>
-            </div>
-          </div>
-
-          <!-- Java -->
-          <div class="mb-4">
-            <span class="fw-bolder fs-4">
-              <i
-                class="fa-brands fa-java"
-                style="color: rgba(2, 118, 145, 255)"
-              ></i>
-              Java</span
-            >
-            <div class="progress" style="height: 25px">
+              <!-- col 2 -->
               <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 80%"
-                aria-valuenow="80"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
+                class="col-md-6 text-center text-md-center fs-3 fw-light py-5"
               >
-                80%
-              </div>
-            </div>
-          </div>
-
-          <!-- PHP -->
-          <div class="mb-4">
-            <span class="fw-bolder fs-4">
-              <i
-                class="fa-brands fa-php"
-                style="color: rgba(120, 124, 180, 255)"
-              ></i>
-              PHP</span
-            >
-            <div class="progress" style="height: 25px">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 70%"
-                aria-valuenow="70"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
-              >
-                70%
-              </div>
-            </div>
-          </div>
-
-          <!-- Python -->
-          <div class="mb-4">
-            <span class="fw-bolder fs-4">
-              <i
-                class="fa-brands fa-python"
-                style="color: rgba(87, 124, 170, 255)"
-              ></i>
-              Python</span
-            >
-            <div class="progress" style="height: 25px">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 75%"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
-              >
-                75%
-              </div>
-            </div>
-          </div>
-
-          <!-- SQL -->
-          <div class="mb-4">
-            <span class="fw-bolder fs-4">
-              <i class="fa-solid fa-database"></i> SQL</span
-            >
-            <div class="progress" style="height: 25px">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 60%"
-                aria-valuenow="60"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
-              >
-                60%
-              </div>
-            </div>
-          </div>
-
-          <!-- C -->
-          <div class="mb-4">
-            <span class="fw-bolder fs-4">C</span>
-            <div class="progress" style="height: 25px">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 50%"
-                aria-valuenow="50"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
-              >
-                50%
-              </div>
-            </div>
-          </div>
-
-          <!-- Assembly -->
-          <div class="mb-4">
-            <span class="fw-bolder fs-4">Assembly</span>
-            <div class="progress" style="height: 25px">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 30%"
-                aria-valuenow="30"
-                aria-valuemin="0"
-                ariavaluemax="100"
-                data-aos="fade-right"
-              >
-                30%
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- soft skills -->
-        <div class="soft-skills">
-          <!-- row 1 -->
-          <div class="row justify-content-center align-items-center">
-            <!-- col 1 -->
-            <div class="col-md-6 text-center text-md-center fs-3 fw-light py-5">
-              <!-- pcb 1 -->
-              <div class="cpb-container">
-                <div class="cpb-skill">
-                  <div class="cpb-outer">
-                    <div class="cpb-inner">
-                      <div class="cpb-number" data-cpb-value="75"></div>
+                <!-- pcb 4 -->
+                <div class="cpb-container">
+                  <div class="cpb-skill">
+                    <div class="cpb-outer">
+                      <div class="cpb-inner">
+                        <div class="cpb-number" data-cpb-value="65"></div>
+                      </div>
                     </div>
+
+                    <svg
+                      id="svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      width="160px"
+                      height="160px"
+                    >
+                      <defs>
+                        <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                      </defs>
+                      <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
                   </div>
-
-                  <svg
-                    id="svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    width="160px"
-                    height="160px"
-                  >
-                    <defs>
-                      <linearGradient id="GradientColor">
-                        <stop offset="0%" stop-color="#e91e63" />
-                        <stop offset="100%" stop-color="#673ab7" />
-                      </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                  </svg>
                 </div>
+                <p class="fw-bold fs-4">Teamwork</p>
               </div>
-              <p class="fw-bold fs-4">Leadership</p>
             </div>
-
-            <!-- col 2 -->
-            <div class="col-md-6 text-center text-md-center fs-3 fw-light py-5">
-              <!-- pcb 2 -->
-              <div class="cpb-container">
-                <div class="cpb-skill">
-                  <div class="cpb-outer">
-                    <div class="cpb-inner">
-                      <div class="cpb-number" data-cpb-value="80"></div>
-                    </div>
-                  </div>
-
-                  <svg
-                    id="svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    width="160px"
-                    height="160px"
-                  >
-                    <defs>
-                      <linearGradient id="GradientColor">
-                        <stop offset="0%" stop-color="#e91e63" />
-                        <stop offset="100%" stop-color="#673ab7" />
-                      </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                  </svg>
-                </div>
-              </div>
-              <p class="fw-bold fs-4">Problem solving</p>
-            </div>
+            <p class="text-center fs-3 fw-light py-5">And much more...</p>
           </div>
-
-          <!-- row 2 -->
-          <div class="row justify-content-center align-items-center">
-            <!-- col 1 -->
-            <div class="col-md-6 text-center text-md-center fs-3 fw-light py-5">
-              <!-- pcb 3 -->
-              <div class="cpb-container">
-                <div class="cpb-skill">
-                  <div class="cpb-outer">
-                    <div class="cpb-inner">
-                      <div class="cpb-number" data-cpb-value="85"></div>
-                    </div>
-                  </div>
-
-                  <svg
-                    id="svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    width="160px"
-                    height="160px"
-                  >
-                    <defs>
-                      <linearGradient id="GradientColor">
-                        <stop offset="0%" stop-color="#e91e63" />
-                        <stop offset="100%" stop-color="#673ab7" />
-                      </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                  </svg>
-                </div>
-              </div>
-              <p class="fw-bold fs-4">Creativity</p>
-            </div>
-            <!-- col 2 -->
-            <div class="col-md-6 text-center text-md-center fs-3 fw-light py-5">
-              <!-- pcb 4 -->
-              <div class="cpb-container">
-                <div class="cpb-skill">
-                  <div class="cpb-outer">
-                    <div class="cpb-inner">
-                      <div class="cpb-number" data-cpb-value="65"></div>
-                    </div>
-                  </div>
-
-                  <svg
-                    id="svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    width="160px"
-                    height="160px"
-                  >
-                    <defs>
-                      <linearGradient id="GradientColor">
-                        <stop offset="0%" stop-color="#e91e63" />
-                        <stop offset="100%" stop-color="#673ab7" />
-                      </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-                  </svg>
-                </div>
-              </div>
-              <p class="fw-bold fs-4">Teamwork</p>
-            </div>
-          </div>
-          <p class="text-center fs-3 fw-light py-5">And much more...</p>
         </div>
       </div>
     </section>
@@ -753,480 +864,432 @@
     <!-- EDUCATION -->
     <!-- <section id="education" class="container-lg my-5 py-5"></section> -->
 
-    <!-- ESPERIENZE -->
-    <section id="experience" class="container-lg my-5 py-5">
-      <!-- Web Developer -->
-      <div class="text-start ps-0 pb-5 mb-5">
-        <div class="row justify-content-center align-items-center pe-0">
-          <div
-            class="col-12 col-md-11 display-2 text-md-end text-center pb-2 ps-0"
-          >
-            Web developer
-          </div>
+    <!-- EXPERIENCES -->
+    <section id="experiences">
+      <div id="experience" class="container-lg my-5 py-5">
+        <!-- Web Developer -->
+        <div class="text-start ps-0 pb-5 mb-5">
+          <div class="row justify-content-center align-items-center pe-0">
+            <div
+              class="col-12 col-md-11 display-2 text-md-end text-center pb-2 ps-0"
+            >
+              Web developer
+            </div>
 
-          <!-- <div class="col-12 col-md-2 fw-bold text-md-end text-center pe-3">
-            <small>2024 - [in progress]</small>
-          </div> -->
-        </div>
-        <p
-          class="lead fw-light fs-3 px-3 px-md-3 me-md-5 border-md-end border-sm-bottom border-info border-2 text-md-end text-center"
-        >
-          From July 2024 I started a new job experience at
-          <span class="fst-italic">T30 Web Agency</span>, based in Eboli (SA),
-          as a web developer. Here, My job is to develop websites for small and
-          large companies. I use Wordpress as CMS, Elementor as page-builder,
-          other plugins and widgets and custom code in HTML, CSS, JS and PHP
-        </p>
-      </div>
-
-      <!-- Tutoring -->
-      <div class="text-start ps-0 pb-5 mb-5">
-        <div class="row justify-content-center align-items-center pe-0">
-          <!-- <div
-            class="col-12 col-md-2 fw-bold text-md-start text-center ps-md-3"
-          >
-            <small>2018 - [in progress]</small>
-          </div> -->
-          <div
-            class="col-12 col-md-11 display-2 pb-2 ps-0 text-md-start text-center"
-          >
-            Tutoring
+            <!-- <div class="col-12 col-md-2 fw-bold text-md-end text-center pe-3">
+               <small>2024 - [in progress]</small>
+             </div> -->
           </div>
+          <p
+            class="lead fw-light fs-3 px-3 px-md-3 me-md-5 border-md-end border-sm-bottom border-info border-2 text-md-end text-center"
+          >
+            From July 2024 I started a new job experience at
+            <span class="fst-italic">T30 Web Agency</span>, based in Eboli (SA),
+            as a web developer. Here, My job is to develop websites for small
+            and large companies. I use Wordpress as CMS, Elementor as
+            page-builder, other plugins and widgets and custom code in HTML,
+            CSS, JS and PHP
+          </p>
         </div>
-        <p
-          class="lead fw-light fs-3 px-3 px-md-5 ms-md-5 border-md-start border-sm-bottom border-info border-2 text-md-start text-center"
-        >
-          In 2018 I started tutoring guys from middle school to university for
-          scientific subject such as math, physics and computer science. At
-          first at "Diversiamo", Salerno, then I kept on doing it privately.
-        </p>
-      </div>
 
-      <!-- Private coach -->
-      <div class="text-start ps-0 pb-5 mb-5">
-        <div class="row justify-content-center align-items-center pe-0">
-          <div
-            class="col-12 col-md-11 display-2 text-md-end text-center pb-2 ps-0"
-          >
-            Private coach
+        <!-- Tutoring -->
+        <div class="text-start ps-0">
+          <div class="row justify-content-center align-items-center pe-0">
+            <!-- <div
+               class="col-12 col-md-2 fw-bold text-md-start text-center ps-md-3"
+             >
+               <small>2018 - [in progress]</small>
+             </div> -->
+            <div
+              class="col-12 col-md-11 display-2 pb-2 ps-0 text-md-start text-center"
+            >
+              Tutoring
+            </div>
           </div>
-          <!-- <div class="col-12 col-md-2 fw-bold text-md-end text-center pe-md-3">
-            <small>2018 - 2019</small>
-          </div> -->
-        </div>
-        <p
-          class="lead fw-light fs-3 px-3 px-md-5 me-md-5 border-md-end border-sm-bottom border-info border-2 text-md-end text-center"
-        >
-          Upon completion of my previous experience, I helped people and teams
-          to improve their mechanical and mental skills to the game.
-        </p>
-      </div>
-
-      <!-- E-Sport player -->
-      <div class="text-start ps-0 pb-5 mb-5">
-        <div class="row justify-content-center align-items-center pe-0">
-          <!-- <div
-            class="col-12 col-md-2 fw-bold text-md-start text-center ps-md-3"
+          <p
+            class="lead fw-light fs-3 px-3 px-md-5 ms-md-5 border-md-start border-sm-bottom border-info border-2 text-md-start text-center"
           >
-            <small>2016 - 2019</small>
-          </div> -->
-          <div
-            class="col-12 col-md-11 display-2 pb-2 ps-0 text-md-start text-center"
-          >
-            E-Sport player
-          </div>
+            In 2018 I started tutoring guys from middle school to university for
+            scientific subject such as math, physics and computer science. At
+            first at "Diversiamo", Salerno, then I kept on doing it privately.
+          </p>
         </div>
-        <p
-          class="lead fw-light fs-3 px-3 px-md-5 ms-md-5 border-md-start border-sm-bottom border-info border-2 text-md-start text-center"
-        >
-          Following my hobby for videogames, I started my semi-professional
-          career as an E-Sport player for a few national and European teams in
-          the online game called Overwatch. During this experience I improved my
-          English language and gained leadership skills due to my role in the
-          team.
-        </p>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="container-lg my-5 py-5">
-      <!-- row 1 -->
-      <div
-        class="row justify-content-end align-items-center mb-5"
-        data-aos="fade-left"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg position-relative">
-            <div class="row g-0">
-              <div class="col-md-4 bg-info rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-5 fw-bold bg-light rounded border p-3"
-                  >
-                    Videogame reviews site
-                  </h5>
-                  <p
-                    class="card-latest p-absolute fs-6 fw-bold rounded bg-success bg-gradient text-light d-inline position-absolute top-0 start-0 m-2"
-                  >
-                    <span class="p-2">My latest project!</span>
-                  </p>
-                  <p class="card-text fs-3 fw-light">
-                    Individual
-                    <span class="bg-info rounded fw-normal">React project</span>
-                    where you can search, view and review for a multitude of
-                    videogames. It is based on
-                    <span class="fst-italic">RAWG APIs</span> to fetch the
-                    datas. It also uses
-                    <span class="fw-normal">routing</span> library to move
-                    between pages,
-                    <span class="fw-normal">Material UI</span> and
-                    <span class="fw-normal">antd</span> libraries for design.
-                  </p>
-                  <a
-                    href="https://github.com/SDdev96/sito-recensioni-videogiochi"
-                    class="btn btn-outline-dark"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-danger">My latest project</small>
-                    </p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- row 2 -->
-      <div
-        class="row justify-content-start align-items-center mb-5"
-        data-aos="fade-right"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <!-- col 1 -->
-        <div class="col-md-9 text-center text-md-start">
-          <div class="card mb-3 shadow-lg">
-            <div class="row g-0">
-              <div class="col-md-4 bg-warning rounded-start">
-                <!-- <img src="..." class="img-fluid rounded-start" alt="..."/> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5
-                    class="card-title display-3 fw-bold bg-light rounded border p-3"
-                  >
-                    Spiderman Home
-                  </h5>
-                  <p class="card-text fs-3 fw-light">
-                    Team project for an
-                    <span class="bg-warning rounded fst-italic"
-                      >advertising website</span
+    <section id="projects">
+      <div id="projects" class="my-5 py-5">
+        <div id="additionalProjects" class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <!-- progetto 1 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project1"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
                     >
-                    for spiderman products and draw for bundle (<span
-                      class="fw-normal"
-                      >HTML5</span
-                    >, <span class="fw-normal">CSS3</span>,
-                    <span class="fw-normal">JS</span>,
-                    <span class="fw-normal">PHP</span>,
-                    <span class="fw-normal">PGSQL</span>)
-                  </p>
-                  <a
-                    href="https://github.com/SDdev96/spiderman-home"
-                    class="btn btn-outline-dark"
-                    target="_blank"
-                    >Discover more</a
-                  >
-                  <!-- <p class="card-text">
-                      <small class="text-muted"></small>
-                    </p> -->
+                      Videogame reviews site
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Website where you can seatch, view, review and filter for
+                      a moltitude of videogames.
+                    </p>
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary"
+                        >React.js</span
+                      >
+                      <span class="badge rounded-pill bg-secondary"
+                        >React-hook-form</span
+                      >
+                      <span class="badge rounded-pill bg-secondary"
+                        >React-router-dom</span
+                      >
+                      <span class="badge rounded-pill bg-secondary"
+                        >Material UI</span
+                      >
+                      <span class="badge rounded-pill bg-secondary">Antd</span>
+                      <span class="badge rounded-pill bg-secondary"
+                        >Bootstrap</span
+                      >
+                      <span class="badge rounded-pill bg-secondary">Sass</span>
+                      <span class="badge rounded-pill bg-secondary"
+                        >REST API</span
+                      >
+                      <span class="badge rounded-pill bg-secondary">JSON</span>
+                      <span class="badge rounded-pill bg-secondary"
+                        >JSON Server</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="additionalProjects" class="projects-hidden">
-        <!-- row 3 -->
-        <div
-          class="row justify-content-center align-items-center mb-5"
-          data-aos="zoom-in"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="500"
-        >
-          <!-- col 1 -->
-          <div class="col-md-9 text-center text-md-start">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4 bg-danger rounded-start">
-                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
+              </li>
+              <!-- progetto 2 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project2"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
+                    >
+                      My Weather
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Website to check the current and forecast weather in every
+                      place all around the globe.
+                    </p>
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Vue.js</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Tailwind</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >vite.js</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >REST API
+                      </span>
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Geolocation API</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5
-                      class="card-title display-5 fw-bold bg-light rounded border p-3"
+              </li>
+              <!-- progetto 3 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project3"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
+                    >
+                      Spiderman Home
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Advertising website for spiderman products and draw for
+                      bundle for registered users
+                    </p>
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >HTML5</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >CSS3</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >PHP</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >PostgreSQL</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >PgAdmin</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Figma</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- progetto 4 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project4"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
                     >
                       Report INGV
-                    </h5>
-                    <p class="card-text fs-3 fw-light">
-                      <span class="bg-danger rounded"
-                        ><span class="fw-normal">JavaFX</span> application</span
-                      >
-                      using SceneBuilder, it shows and filters earthquakes from
-                      INGV .csv files
+                    </h3>
+                    <p class="card-text text-muted small">
+                      JavaFX application that shows and filters earthquakes from
+                      INGV files
                     </p>
-                    <a
-                      href="https://github.com/SDdev96/reportINGV"
-                      class="btn btn-outline-dark"
-                      target="_blank"
-                      >Discover more</a
-                    >
-                    <!-- <p class="card-text">
-                        <small class="text-muted"></small>
-                      </p> -->
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Java</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >JavaFX</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >SceneBuilder</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- row 4 -->
-        <div
-          class="row justify-content-end align-items-center mb-5"
-          data-aos="fade-left"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="500"
-        >
-          <!-- col 1 -->
-          <div class="col-md-9 text-center text-md-start">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4 bg-info rounded-start">
-                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5
-                      class="card-title display-5 fw-bold bg-light rounded border p-3"
+              </li>
+              <!-- progetto 5 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project5"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
                     >
                       Athletics
-                    </h5>
-                    <p class="card-text fs-3 fw-light">
-                      Design of <span class="bg-info rounded">DBMS</span> for
-                      World Championships in Athletics 2024, taking care of all
-                      the design aspects and scripting using
-                      <span class="fw-normal">PostgreSQL</span>
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Design and scripting of DBMS for World Championships in
+                      Athletics 2024
                     </p>
-                    <a
-                      href=""
-                      class="btn btn-outline-dark disabled"
-                      target="_blank"
-                      >Discover more</a
-                    >
-                    <!-- <p class="card-text">
-                        <small class="text-muted">dsadasd</small>
-                      </p> -->
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >PgAdmin</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >PostgreSQL</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- row 5 -->
-        <div
-          class="row justify-content-start align-items-center mb-5"
-          data-aos="fade-right"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="500"
-        >
-          <!-- col 1 -->
-          <div class="col-md-9 text-center text-md-start">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4 bg-secondary rounded-start">
-                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5
-                      class="card-title display-3 fw-bold bg-light rounded border p-3"
-                    >
-                      Portfolio Website
-                    </h5>
-                    <p class="card-text fs-3 fw-light">
-                      Ending project for Web Development course by Learnn (<span
-                        class="fw-normal"
-                        >HTML5</span
-                      >, <span class="fw-normal">CSS3</span>,
-                      <span class="fw-normal">JS</span>)
-                    </p>
-                    <a
-                      href="https://github.com/SDdev96/LearnnSite"
-                      class="btn btn-outline-dark"
-                      target="_blank"
-                      >Discover more</a
-                    >
-                    <!-- <p class="card-text">
-                        <small class="text-muted"></small>
-                      </p> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- row 6 -->
-        <div
-          class="row justify-content-center align-items-center mb-5"
-          data-aos="zoom-in"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="500"
-        >
-          <!-- col 1 -->
-          <div class="col-md-9 text-center text-md-start">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4 bg-warning rounded-start">
-                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5
-                      class="card-title display-5 fw-bold bg-light rounded border p-3"
+              </li>
+              <!-- progetto 6 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project6"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
                     >
                       SensorKit
-                    </h5>
-                    <p class="card-text fs-3 fw-light">
-                      <span class="bg-warning rounded"
-                        ><span class="fw-normal">Java</span> application</span
-                      >
-                      , management of sensors for IoT applications
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Java application, management of sensors for IoT
+                      applications
                     </p>
-                    <a
-                      href="https://github.com/SDdev96/sensorKit"
-                      class="btn btn-outline-dark"
-                      target="_blank"
-                      >Discover more</a
-                    >
-                    <!-- <p class="card-text">
-                        <small class="text-muted"></small>
-                      </p> -->
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Java</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- row 7 -->
-        <div
-          class="row justify-content-end align-items-center mb-5"
-          data-aos="fade-left"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="500"
-        >
-          <!-- col 1 -->
-          <div class="col-md-9 text-center text-md-start">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4 bg-info rounded-start">
-                  <!-- <img src="..." class="img-fluid rounded-start" alt="..." /> -->
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5
-                      class="card-title display-5 fw-bold bg-light rounded border p-3"
+              </li>
+              <!-- progetto 7 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project7"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
                     >
                       IntelliCurtain
-                    </h5>
-                    <p class="card-text fs-3 fw-light">
-                      Iot team project aimed to build a
-                      <span class="bg-info rounded">smart curtain</span> for a
-                      smart house, using
-                      <span class="fw-normal">Mycropython</span>, the ESP32 chip
-                      and advanced I/O components. It included remote control
-                      using the Node-RED tool, MQTT protocol and a simple
-                      browser interface with Docker
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Smart curtain for smart houses, including remote control.
                     </p>
-                    <a
-                      href="https://github.com/SDdev96/SmartCurtain"
-                      class="btn btn-outline-dark"
-                      target="_blank"
-                      >Discover more</a
-                    >
-                    <!-- <p class="card-text">
-                        <small class="text-muted"></small>
-                      </p> -->
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Python</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >MicroPython</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >ESP32 chip</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Node-RED</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >MQTT protocol</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Docker</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- row 8 -->
-        <div
-          class="row justify-content-start align-items-center mb-5"
-          data-aos="fade-right"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="500"
-        >
-          <!-- col 1 -->
-          <div class="col-md-9 text-center text-md-start">
-            <div class="card mb-3 shadow-lg">
-              <div class="row g-0">
-                <div class="col-md-4 bg-danger rounded-start">
-                  <!-- <img src="..." class="img-fluid rounded-start" alt="..."/> -->
+              </li>
+              <!-- progetto 8 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project8"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
+                    >
+                      Porfolio Website
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Actually, this website!
+                    </p>
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >HTML5</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >CSS3</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >JavaScript</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Bootstrap</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >Glide.js</span
+                      >
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >JQuery</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5
-                      class="card-title display-3 fw-bold bg-light rounded border p-3"
+              </li>
+              <!-- progetto 9 -->
+              <li class="glide__slide">
+                <div class="card shadow-sm">
+                  <div class="card-image bg-primary project9"></div>
+                  <div class="card-body text-center">
+                    <h3
+                      class="card-title display-6 border-bottom border-2 pb-1"
                     >
                       Tenzies Game
-                    </h5>
-                    <p class="card-text fs-3 fw-light">
-                      Local web game developed in
-                      <span class="fst-italic"
-                        >functional
-                        <span class="bg-danger rounded text-white"
-                          >React</span
-                        ></span
-                      >
+                    </h3>
+                    <p class="card-text text-muted small">
+                      Simple Tenzies game built on website
                     </p>
-                    <a
-                      href="https://github.com/SDdev96/tenzies-game"
-                      class="btn btn-outline-dark"
-                      target="_blank"
-                      >Discover more</a
-                    >
-                    <!-- <p class="card-text">
-                        <small class="text-muted"></small>
-                      </p> -->
+                    <div class="card-tech mb-3">
+                      <span class="badge rounded-pill bg-secondary me-1"
+                        >React.js</span
+                      >
+                    </div>
+                    <div class="card-actions">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary btn-sm disabled"
+                        >Live Demo</a
+                      >
+                      <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Controlli opzionali -->
+          <div class="glide__arrows d-none d-md-block" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <span>Prev</span>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <span>Next</span>
+            </button>
           </div>
         </div>
-      </div>
-
-      <!-- button to show more -->
-      <div class="text-center mb-5">
-        <button id="expandButton" class="btn btn-dark">
-          Show more projects
-        </button>
       </div>
     </section>
 
@@ -1326,7 +1389,11 @@
         <!-- rights -->
         <div class="text-small text-center pb-4">
           <small class="text-muted"
-            >™ & © 2024 Tutti i diritti riservati.</small
+            >™ & ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Tutti i diritti riservati.</small
           >
         </div>
 
