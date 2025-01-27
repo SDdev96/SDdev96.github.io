@@ -87,9 +87,27 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 350px;
   border-radius: 4px 4px 0 0;
 }
+@media (min-width: 1920px){
+  .card-image {
+    height: 450px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .card-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 575px) {
+  .card-image {
+    height: 150px;
+  }
+}
+
 .card-image.project1 {
   background-image: url("../assets/img/videogame-reviews-site.png");
   background-position: top;
