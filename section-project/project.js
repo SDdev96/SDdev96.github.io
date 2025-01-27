@@ -9,13 +9,14 @@ var glide = new Glide(".glide", {
   },
   focusAt: "center",
   gap: 0,
-  // autoplay: true,
+  autoplay: 3000,
   hoverpause: true,
   swipeThreshold: 80,
   animationTimingFunc: "ease-in-out",
   animationDuration: 300,
   breakpoints: {
     768: {
+      autoplay: false,
       perView: 1,
       peek: {
         before: 75,
