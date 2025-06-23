@@ -8,6 +8,7 @@
 }
 
 .navbar-nav > li > a,
+.dropdown-item,
 .nav > li > a > span > i::before,
 a > i::before {
   cursor: pointer;
