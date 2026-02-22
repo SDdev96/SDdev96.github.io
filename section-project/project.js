@@ -1,45 +1,45 @@
-// document.addEventListener("DOMContentLoaded", function () {
-var glide = new Glide(".glide", {
-  startAt: 0,
-  type: "carousel",
-  perView: 1,
-  peek: {
-    before: 150,
-    after: 150,
-  },
-  focusAt: "center",
-  gap: 0,
-  autoplay: 3000,
-  hoverpause: true,
-  swipeThreshold: 80,
-  animationTimingFunc: "ease-in-out",
-  animationDuration: 300,
-  breakpoints: {
-    768: {
-      autoplay: false,
-      perView: 1,
-      peek: {
-        before: 75,
-        after: 75,
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".projectsSwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    initialSlide: 0,
+    loop: true,
+    speed: 600,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2,
+      slideShadows: false,
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    keyboard: {
+      enabled: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: "auto",
+        spaceBetween: 30,
       },
     },
-    576: {
-      perView: 1,
-      peek: {
-        before: 75,
-        after: 75,
-      },
-    },
-    425: {
-      perView: 1,
-      peek: {
-        before: 50,
-        after: 50,
-      },
-    },
-  },
+  });
 });
-
-glide.mount();
-
-// });

@@ -1,113 +1,101 @@
-.glide__arrows button {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  background: #007bff;
-  overflow: hidden;
-  border: none;
-}
-
-.glide__arrows button:after {
-  position: absolute;
-  content: " ";
-  width: 0%;
-  height: 100%;
-  background: #183153;
-  transition: all 0.4s ease-in-out;
-  right: 0;
-}
-
-.glide__arrows button:hover::after {
-  right: auto;
-  left: 0;
+/* Swiper Container */
+.projectsSwiper {
   width: 100%;
+  padding: 50px 0;
 }
 
-.glide__arrows button span {
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-  padding: 8px 16px;
-  color: #fff;
-  z-index: 2;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+/* Swiper Slide */
+.projectsSwiper .swiper-slide {
+  width: 400px;
+  transition: all 0.4s ease;
 }
 
-.glide__arrows button:hover span {
-  animation: scaleUp 0.3s ease-in-out;
-}
-
-@keyframes scaleUp {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(0.8);
-  }
-
-  100% {
-    transform: scale(1);
+@media (max-width: 768px) {
+  .projectsSwiper .swiper-slide {
+    width: 300px;
   }
 }
 
-.glide__arrow:focus {
-  outline: none;
-}
-.glide__arrow--left {
-  left: 2em;
-}
-.glide__arrow--right {
-  right: 2em;
-}
-.glide__arrow--disabled {
-  opacity: 0.33;
+@media (max-width: 480px) {
+  .projectsSwiper .swiper-slide {
+    width: 260px;
+  }
 }
 
-.glide__slide {
-  transition: transform 0.5s ease, opacity 0.5s ease;
+/* Card styling */
+.projectsSwiper .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.glide__slide--active {
-  border-radius: 8px;
-  transform: scale(1);
+
+.projectsSwiper .swiper-slide-active .card {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.projectsSwiper .swiper-slide:not(.swiper-slide-active) .card {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0d6efd;
+  background: rgba(255, 255, 255, 0.9);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #dee2e6;
   opacity: 1;
+  transition: all 0.3s ease;
 }
 
-/* Stile per le slide non attive */
-.glide__slide:not(.glide__slide--active) {
-  transform: scale(0.8);
-  opacity: 0.5;
+.swiper-pagination-bullet-active {
+  background: #0d6efd;
+  transform: scale(1.2);
 }
 
+/* Card Image */
 .card-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
-  border-radius: 4px 4px 0 0;
+  height: 200px;
 }
-@media (min-width: 1920px){
+
+@media (min-width: 1200px) {
   .card-image {
-    height: 450px;
+    height: 220px;
   }
 }
 
-@media (max-width: 1439px) {
-  .card-image {
-    height: 250px;
-  }
-}
-
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   .card-image {
     height: 150px;
   }
 }
 
+/* Project images */
 .card-image.project1 {
   background-image: url("../assets/img/videogame-reviews-site.png");
   background-position: top;
@@ -137,4 +125,12 @@
 .card-image.project9 {
   background-image: url("../assets/img/tenzies-game.png");
   background-position: top;
+}
+
+/* Hide navigation on mobile */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
