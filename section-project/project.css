@@ -66,7 +66,7 @@
   height: 12px;
   background: #dee2e6;
   opacity: 1;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
@@ -126,11 +126,27 @@
   background-position: top;
 }
 
-/* Hide navigation on mobile */
+/* Mobile keeps the arrows — it is the viewport where one card is readable at a
+   time, so a deliberate "next" is worth more here than on desktop. They shrink
+   instead of disappearing, and sit clear of the 260px slide. */
 @media (width <= 768px) {
   .swiper-button-next,
   .swiper-button-prev {
-    display: none;
+    width: 44px;
+    height: 44px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px;
+  }
+
+  .swiper-button-prev {
+    left: 2px;
+  }
+
+  .swiper-button-next {
+    right: 2px;
   }
 }
 

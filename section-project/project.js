@@ -20,11 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     // Auto-advancing carousels are hostile to users who need more reading time,
     // so the rotation is disabled when the OS asks for reduced motion.
+    //
+    // `disableOnInteraction: true` is the important one: the moment the visitor
+    // swipes or taps, the carousel becomes theirs and stops moving on its own.
+    // With `false`, the timer stole the card back 4s later — and since touch
+    // devices have no hover, `pauseOnMouseEnter` gave mobile users no way out.
     autoplay: prefersReducedMotion
       ? false
       : {
-          delay: 4000,
-          disableOnInteraction: false,
+          delay: 6500,
+          disableOnInteraction: true,
           pauseOnMouseEnter: true,
         },
     pagination: {

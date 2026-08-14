@@ -13,6 +13,14 @@
   }
 }
 
+/* The one badge in the row that is a positioning claim rather than a tool.
+   Gradient fill so it reads as a different class of fact at a glance. */
+.badge-signature {
+  /* Deeper magenta than the dials so the white label clears AA (5.87:1, not 4.35:1). */
+  background-image: linear-gradient(135deg, #c2185b, #673ab7);
+  color: #fff;
+}
+
 /* Current Experience Styling */
 .current-experience {
   animation: pulse 2s infinite;

@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-14T00:00:00.000Z",
+  "title": "Design System: Salvatore D'Ambrosio Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "heart-magenta": {
+        "role": "secondary",
+        "displayName": "Heart Magenta",
+        "canonical": "#e91e63",
+        "tonalRamp": [
+          "oklch(20% 0.10 0)",
+          "oklch(31% 0.14 0)",
+          "oklch(42% 0.18 0)",
+          "oklch(53% 0.21 0)",
+          "oklch(60% 0.22 0)",
+          "oklch(71% 0.16 0)",
+          "oklch(82% 0.10 0)",
+          "oklch(94% 0.04 0)"
+        ]
+      },
+      "heart-violet": {
+        "role": "secondary",
+        "displayName": "Heart Violet",
+        "canonical": "#673ab7",
+        "tonalRamp": [
+          "oklch(18% 0.11 300)",
+          "oklch(28% 0.16 300)",
+          "oklch(38% 0.20 300)",
+          "oklch(45% 0.22 300)",
+          "oklch(55% 0.20 300)",
+          "oklch(68% 0.15 300)",
+          "oklch(81% 0.09 300)",
+          "oklch(94% 0.03 300)"
+        ]
+      },
+      "wayfinder-blue": {
+        "role": "primary",
+        "displayName": "Wayfinder Blue",
+        "canonical": "#0d6efd",
+        "tonalRamp": [
+          "oklch(20% 0.10 262)",
+          "oklch(31% 0.15 262)",
+          "oklch(42% 0.19 262)",
+          "oklch(53% 0.22 262)",
+          "oklch(60% 0.22 262)",
+          "oklch(72% 0.16 262)",
+          "oklch(84% 0.09 262)",
+          "oklch(95% 0.03 262)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#212529",
+        "tonalRamp": [
+          "oklch(15% 0.006 240)",
+          "oklch(26% 0.006 240)",
+          "oklch(37% 0.006 240)",
+          "oklch(48% 0.006 240)",
+          "oklch(59% 0.006 240)",
+          "oklch(70% 0.006 240)",
+          "oklch(82% 0.005 240)",
+          "oklch(95% 0.003 240)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f8f9fa",
+        "tonalRamp": [
+          "oklch(16% 0.003 240)",
+          "oklch(27% 0.003 240)",
+          "oklch(38% 0.003 240)",
+          "oklch(49% 0.003 240)",
+          "oklch(61% 0.003 240)",
+          "oklch(73% 0.003 240)",
+          "oklch(86% 0.003 240)",
+          "oklch(98% 0.002 240)"
+        ]
+      },
+      "surface-white": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(27% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(50% 0 0)",
+          "oklch(62% 0 0)",
+          "oklch(74% 0 0)",
+          "oklch(87% 0 0)",
+          "oklch(100% 0 0)"
+        ]
+      },
+      "muted-slate": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "#6c757d",
+        "tonalRamp": [
+          "oklch(17% 0.010 240)",
+          "oklch(28% 0.013 240)",
+          "oklch(39% 0.016 240)",
+          "oklch(50% 0.018 240)",
+          "oklch(58% 0.019 240)",
+          "oklch(70% 0.015 240)",
+          "oklch(83% 0.010 240)",
+          "oklch(95% 0.004 240)"
+        ]
+      },
+      "divider-mist": {
+        "role": "neutral",
+        "displayName": "Divider Mist",
+        "canonical": "#dee2e6",
+        "tonalRamp": [
+          "oklch(16% 0.005 240)",
+          "oklch(27% 0.006 240)",
+          "oklch(38% 0.007 240)",
+          "oklch(50% 0.008 240)",
+          "oklch(62% 0.009 240)",
+          "oklch(74% 0.009 240)",
+          "oklch(89% 0.007 240)",
+          "oklch(97% 0.003 240)"
+        ]
+      },
+      "signal-cyan": {
+        "role": "tertiary",
+        "displayName": "Signal Cyan",
+        "canonical": "#0dcaf0",
+        "tonalRamp": [
+          "oklch(22% 0.06 220)",
+          "oklch(34% 0.08 220)",
+          "oklch(46% 0.10 220)",
+          "oklch(58% 0.12 220)",
+          "oklch(78% 0.13 220)",
+          "oklch(85% 0.10 220)",
+          "oklch(91% 0.06 220)",
+          "oklch(97% 0.02 220)"
+        ]
+      },
+      "signal-amber": {
+        "role": "tertiary",
+        "displayName": "Signal Amber",
+        "canonical": "#ffc107",
+        "tonalRamp": [
+          "oklch(25% 0.07 85)",
+          "oklch(38% 0.10 85)",
+          "oklch(51% 0.13 85)",
+          "oklch(64% 0.15 85)",
+          "oklch(85% 0.17 85)",
+          "oklch(90% 0.12 85)",
+          "oklch(94% 0.07 85)",
+          "oklch(98% 0.03 85)"
+        ]
+      },
+      "signal-crimson": {
+        "role": "tertiary",
+        "displayName": "Signal Crimson",
+        "canonical": "#dc3545",
+        "tonalRamp": [
+          "oklch(20% 0.09 20)",
+          "oklch(31% 0.13 20)",
+          "oklch(42% 0.17 20)",
+          "oklch(55% 0.20 20)",
+          "oklch(62% 0.19 20)",
+          "oklch(73% 0.14 20)",
+          "oklch(84% 0.09 20)",
+          "oklch(95% 0.03 20)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name itself, once. display-1 at weight 700 — the only element at this size on the page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Job titles: the hero role and all four experience headings. display-2/display-3 at weight 300 — authority through scale, not weight."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project card names and skill labels under the dials. fs-4 / h4 at weight 700."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All prose — intro and experience descriptions. fs-3 / lead at weight 300, which keeps the first-person voice warm rather than heavy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Tech badges and the Current Role pill. The only small type in the system."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dial-outer",
+        "value": "6px 6px 10px -1px rgb(0 0 0 / 0.15), -6px -6px 10px -1px rgb(255 255 255 / 0.7)",
+        "purpose": "The raised neumorphic ring housing. The signature shadow of the entire system — always pass both halves."
+      },
+      {
+        "name": "dial-inner",
+        "value": "inset 4px 4px 6px -1px rgb(0 0 0 / 0.2), inset -4px -4px 6px -1px rgb(255 255 255 / 0.7), -0.5px -0.5px 0px rgb(255 255 255 / 1), 0.5px 0.5px 0px rgb(0 0 0 / 0.15), 0px 12px 10px -10px rgb(0 0 0 / 0.05)",
+        "purpose": "The pressed-in well at the dial's center: two insets for the depression, two hairline offsets for the rim, one ambient drop beneath."
+      },
+      {
+        "name": "panel-lift",
+        "value": "0 1rem 3rem rgb(0 0 0 / 0.175)",
+        "purpose": "White content panels, the hero portrait, project cards at rest (Bootstrap shadow-lg)."
+      },
+      {
+        "name": "active-slide",
+        "value": "0 20px 40px rgb(0 0 0 / 0.15)",
+        "purpose": "The centered carousel card. The highest elevation on the page."
+      },
+      {
+        "name": "control-float",
+        "value": "0 4px 15px rgb(0 0 0 / 0.1)",
+        "purpose": "Carousel arrow buttons floating over content."
+      },
+      {
+        "name": "badge-whisper",
+        "value": "0 0.125rem 0.25rem rgb(0 0 0 / 0.075)",
+        "purpose": "The Current Role pill only (Bootstrap shadow-sm)."
+      },
+      {
+        "name": "attention-pulse",
+        "value": "0 0 0 0 rgb(13 110 253 / 0.4)",
+        "purpose": "Expanding blue halo on the current role, 2s infinite to 0 0 0 10px transparent. A temporal signal wearing depth's clothing; freezes at 0 0 0 3px under reduced motion."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #0d6efd; outline-offset: 2px",
+        "purpose": "Global :focus-visible ring, restored explicitly in index.css because the global reset would otherwise suppress it."
+      }
+    ],
+    "motion": [
+      {
+        "name": "dial-ease-out",
+        "value": "cubic ease-out: 1 - Math.pow(1 - t, 3)",
+        "purpose": "The skill dial count-up, 1200ms default, driven by requestAnimationFrame. Starts fast and settles gently onto the final value."
+      },
+      {
+        "name": "morph-width",
+        "value": "--button-width 0.5s ease-in-out",
+        "purpose": "The back-to-top button widening 40px to 100px through a registered @property so it paints instead of reflowing."
+      },
+      {
+        "name": "morph-radius",
+        "value": "border-radius 0.7s linear",
+        "purpose": "The back-to-top button softening from a circle to 10px corners — deliberately slower than the width so the shape settles last."
+      },
+      {
+        "name": "state-standard",
+        "value": "0.3s ease",
+        "purpose": "Default for card transform/shadow/opacity, carousel controls, and pagination bullets."
+      },
+      {
+        "name": "fade-standard",
+        "value": "0.5s ease-in-out",
+        "purpose": "Opacity and visibility on the back-to-top button's reveal past 1300px scroll."
+      },
+      {
+        "name": "icon-exit",
+        "value": "transform 0.3s ease-in-out",
+        "purpose": "The arrow sliding out of the back-to-top button on translateY(-200%) as the label rises into its place."
+      },
+      {
+        "name": "coverflow-speed",
+        "value": "600ms",
+        "purpose": "Swiper coverflow transition; set to 0 under reduced motion. Autoplay runs at a 4000ms delay and is disabled entirely under reduced motion."
+      },
+      {
+        "name": "pulse-loop",
+        "value": "pulse 2s infinite",
+        "purpose": "The current-role halo. Replaced by a static ring under reduced motion so the highlight survives without the loop."
+      }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "320px" },
+      { "name": "sm", "value": "480px" },
+      { "name": "md", "value": "768px" },
+      { "name": "xl", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Skill Dial",
+      "kind": "custom",
+      "refersTo": "panel-skills",
+      "description": "The system's signature component: a neumorphic dial built from layered box-shadows, with an SVG ring stroked in the Heart Gradient that fills as it scrolls into view.",
+      "html": "<div class=\"ds-cpb-skill\"><div class=\"ds-cpb-outer\"><div class=\"ds-cpb-inner\"><div class=\"ds-cpb-number\">85%</div></div></div><svg class=\"ds-cpb-svg\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http://www.w3.org/2000/svg\" width=\"160px\" height=\"160px\"><defs><linearGradient id=\"dsGradientColor\"><stop offset=\"0%\" stop-color=\"#e91e63\" /><stop offset=\"100%\" stop-color=\"#673ab7\" /></linearGradient></defs><circle cx=\"80\" cy=\"80\" r=\"70\" stroke-linecap=\"round\" stroke=\"url(#dsGradientColor)\" /></svg></div>",
+      "css": ".ds-cpb-skill { --ds-cpb-circumference: 439.82; position: relative; width: 160px; height: 160px; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; } .ds-cpb-outer { position: relative; width: 100%; height: 100%; border-radius: 50%; box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 0.15), -6px -6px 10px -1px rgb(255 255 255 / 0.7); } .ds-cpb-inner { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 75%; height: 75%; border-radius: 50%; box-shadow: inset 4px 4px 6px -1px rgb(0 0 0 / 0.2), inset -4px -4px 6px -1px rgb(255 255 255 / 0.7), -0.5px -0.5px 0px rgb(255 255 255 / 1), 0.5px 0.5px 0px rgb(0 0 0 / 0.15), 0px 12px 10px -10px rgb(0 0 0 / 0.05); } .ds-cpb-number { position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); display: inline-block; font-size: 1.5rem; font-weight: 700; color: #212529; } .ds-cpb-svg { position: absolute; top: 0; left: 0; } .ds-cpb-skill circle { fill: none; stroke-width: 20px; stroke-dasharray: var(--ds-cpb-circumference); stroke-dashoffset: calc(var(--ds-cpb-circumference) * 0.15); }"
+    },
+    {
+      "name": "Back to Top Button",
+      "kind": "button",
+      "refersTo": "back-to-top",
+      "description": "A 40px ink circle that morphs into a 100px rounded pill on hover or focus, sliding its arrow out as the label rises in. Width animates through a registered @property to avoid layout reflow.",
+      "html": "<button class=\"ds-back-to-top\" aria-label=\"Back to top\"><svg class=\"ds-svg-icon\" viewBox=\"0 0 384 512\" aria-hidden=\"true\"><path d=\"M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z\"></path></svg></button>",
+      "css": "@property --ds-button-width { syntax: '<length>'; inherits: false; initial-value: 40px; } .ds-back-to-top { --ds-button-width: 40px; width: var(--ds-button-width); height: 40px; border-radius: 50%; background-color: rgb(33, 37, 41); border: none; font-weight: 400; display: flex; align-items: center; justify-content: center; cursor: pointer; overflow: hidden; position: relative; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; transition: border-radius 0.7s linear, --ds-button-width 0.5s ease-in-out; } .ds-svg-icon { width: 12px; transition: transform 0.3s ease-in-out; } .ds-svg-icon path { fill: white; } .ds-back-to-top:hover, .ds-back-to-top:focus-visible { --ds-button-width: 100px; border-radius: 10px; } .ds-back-to-top:hover .ds-svg-icon, .ds-back-to-top:focus-visible .ds-svg-icon { transform: translateY(-200%); } .ds-back-to-top::before { position: absolute; bottom: -20px; content: 'Back to Top'; color: white; transition-duration: 0.3s; font-size: 0px; cursor: pointer; } .ds-back-to-top:hover::before, .ds-back-to-top:focus-visible::before { font-size: 13px; opacity: 1; bottom: unset; } .ds-back-to-top:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }"
+    },
+    {
+      "name": "Tech Badge",
+      "kind": "chip",
+      "refersTo": "badge-tech",
+      "description": "A pill carrying Wayfinder Blue text over the same blue at 10% opacity — a tinted wash, not a fill, so a dense row of technologies stays quiet.",
+      "html": "<span class=\"ds-badge-tech\">Next.js</span> <span class=\"ds-badge-tech\">PostgreSQL</span> <span class=\"ds-badge-past\">RAG systems</span>",
+      "css": ".ds-badge-tech, .ds-badge-past { display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 50rem; border: none; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; } .ds-badge-tech { color: #0d6efd; background-color: rgb(13 110 253 / 0.1); } .ds-badge-past { color: #6c757d; background-color: rgb(108 117 125 / 0.25); }"
+    },
+    {
+      "name": "Current Role Badge",
+      "kind": "chip",
+      "refersTo": "badge-current-role",
+      "description": "The one solid-fill pill in the system, absolutely positioned to straddle the top-right edge of the current experience block. Paired with the pulsing halo that marks 'you are here'.",
+      "html": "<div class=\"ds-current-wrap\"><span class=\"ds-badge-current\">Current Role</span></div>",
+      "css": ".ds-current-wrap { position: relative; padding: 1.5rem; border-radius: 0.5rem; background: #ffffff; animation: ds-pulse 2s infinite; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; min-height: 60px; } .ds-badge-current { position: absolute; top: 0; right: 0; transform: translateY(-50%); background-color: #0d6efd; color: #fff; padding: 0.25rem 1rem; border-radius: 50rem; font-weight: 600; font-size: 0.75rem; box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 0.075); z-index: 1; } @keyframes ds-pulse { 0% { box-shadow: 0 0 0 0 rgb(13 110 253 / 0.4); } 70% { box-shadow: 0 0 0 10px rgb(13 110 253 / 0); } 100% { box-shadow: 0 0 0 0 rgb(13 110 253 / 0); } } @media (prefers-reduced-motion: reduce) { .ds-current-wrap { animation: none; box-shadow: 0 0 0 3px rgb(13 110 253 / 0.4); } }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "A borderless white card on 1rem corners with a cover-fit image block, tech badges, and paired primary/outline actions. Lifts and scales to 1.05 when it becomes the active carousel slide.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-image\"></div><div class=\"ds-card-body\"><h3 class=\"ds-card-title\">IntelliCurtain</h3><p class=\"ds-card-text\">Smart curtain for smart houses, including remote control.</p><div class=\"ds-card-tech\"><span class=\"ds-badge-tech\">Python</span> <span class=\"ds-badge-tech\">Docker</span></div><div class=\"ds-card-actions\"><a href=\"#\" class=\"ds-btn-primary\">GitHub</a></div></div></div>",
+      "css": ".ds-card { background: #fff; border: none; border-radius: 1rem; overflow: hidden; box-shadow: 0 1rem 3rem rgb(0 0 0 / 0.175); width: 300px; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; } .ds-card:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgb(0 0 0 / 0.15); } .ds-card-image { height: 200px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: linear-gradient(135deg, #e91e63, #673ab7); } .ds-card-body { padding: 1.5rem; text-align: center; } .ds-card-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem; color: #212529; } .ds-card-text { font-size: 0.875rem; color: #6c757d; margin: 0 0 1rem; } .ds-card-tech { margin-bottom: 1rem; display: flex; gap: 0.25rem; justify-content: center; } .ds-card-actions { display: flex; gap: 0.5rem; justify-content: center; } @media (prefers-reduced-motion: reduce) { .ds-card { transition: none; } }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Wayfinder Blue fill with white text at small size — the affirmative action on project cards.",
+      "html": "<a href=\"#\" class=\"ds-btn-primary\">GitHub</a>",
+      "css": ".ds-btn-primary { display: inline-block; background-color: #0d6efd; color: #fff; border: 1px solid #0d6efd; border-radius: 0.25rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; font-weight: 400; text-decoration: none; cursor: pointer; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; } .ds-btn-primary:hover { background-color: #0b5ed7; border-color: #0a58ca; } .ds-btn-primary:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline-primary",
+      "description": "Transparent with a blue rule and blue text — the paired secondary action, inverting to a solid fill on hover.",
+      "html": "<a href=\"#\" class=\"ds-btn-outline\">Live Demo</a>",
+      "css": ".ds-btn-outline { display: inline-block; background-color: transparent; color: #0d6efd; border: 1px solid #0d6efd; border-radius: 0.25rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; font-weight: 400; text-decoration: none; cursor: pointer; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out; } .ds-btn-outline:hover { background-color: #0d6efd; color: #fff; } .ds-btn-outline:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }"
+    },
+    {
+      "name": "Skill Progress Bars",
+      "kind": "custom",
+      "refersTo": "panel-skills",
+      "description": "Two-tier readouts: 25px Signal Cyan bars for languages carrying a percentage, 18px Signal Amber bars for nested frameworks carrying a word instead of a number.",
+      "html": "<div class=\"ds-progress-group\"><span class=\"ds-progress-label\">HTML &amp; CSS</span><div class=\"ds-progress ds-progress-lang\"><div class=\"ds-progress-bar ds-bar-cyan\" role=\"progressbar\" aria-valuenow=\"90\" aria-valuemin=\"0\" aria-valuemax=\"100\">90%</div></div><div class=\"ds-progress ds-progress-fw\"><div class=\"ds-progress-bar ds-bar-amber\" role=\"progressbar\" aria-valuenow=\"95\" aria-valuemin=\"0\" aria-valuemax=\"100\">master</div></div></div>",
+      "css": ".ds-progress-group { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; width: 320px; } .ds-progress-label { font-weight: 800; font-size: 1.5rem; color: #212529; display: block; margin-bottom: 0.25rem; } .ds-progress { display: flex; overflow: hidden; background-color: #e9ecef; border-radius: 0.25rem; margin-bottom: 0.5rem; } .ds-progress-lang { height: 25px; } .ds-progress-fw { height: 18px; width: 75%; margin-left: auto; } .ds-progress-bar { display: flex; align-items: center; justify-content: center; color: #212529; text-align: center; white-space: nowrap; font-size: 0.75rem; } .ds-bar-cyan { width: 90%; background-color: #0dcaf0; } .ds-bar-amber { width: 95%; background-color: #ffc107; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "A transparent navbar sitting directly on the page ground with no background of its own, links at fs-4 with px-3 spacing.",
+      "html": "<nav class=\"ds-nav\"><ul class=\"ds-nav-list\"><li><a href=\"#about-me\" class=\"ds-nav-link\">About Me</a></li><li><a href=\"#skills\" class=\"ds-nav-link\">Skills</a></li><li><a href=\"#projects\" class=\"ds-nav-link\">Projects</a></li></ul></nav>",
+      "css": ".ds-nav { background: transparent; padding: 0.5rem 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; } .ds-nav-list { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; } .ds-nav-list > li { padding: 0 1rem; } .ds-nav-link { font-size: 1.5rem; color: rgba(0, 0, 0, 0.65); text-decoration: none; cursor: pointer; transition: color 0.15s ease-in-out; } .ds-nav-link:hover { color: rgba(0, 0, 0, 0.8); } .ds-nav-link:focus-visible { outline: 3px solid #0d6efd; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Guiding Key",
+    "overview": "The name comes from the Kingdom Hearts line the hero actually carries — \"May your heart be your guiding key\" — and it describes the system's mechanics as precisely as its mood. This is a bright, light-surface world where the visitor is always being shown the way: blue marks every place you can act or every place you currently are, gradient rings fill as you scroll so progress is something you watch rather than read, and a slow pulse marks \"you are here\" on the one role that is current. Nothing hides. Nothing is coy.\n\nThe material is soft. Depth is built from paired light-and-dark shadows implying a light source above and to the left, never from borders — the skill dials are literal neumorphic objects, pillowy and pressable, and the cards float on diffuse shadow with border-0 applied ten separate times to make sure no line interrupts the effect. Against that softness sits hard technical content: language proficiency bars, framework badges, blockchain and RAG work. That tension between soft physics and engineering substance is the visual signature, and it is what keeps an earnest personal site from reading as either sterile or twee.\n\nPersonality is a feature here, not a risk. The videogame quote, the magenta-to-violet gradient, the counting dials, the back-to-top button that stretches open and swallows its own arrow — these are the differentiators in a category where nearly every entry is interchangeable. The system is warm and a little game-like on purpose. What it is not is dark, brutalist, or minimal-to-the-point-of-anonymous; it does not use hairline dividers to organize space, and it does not treat restraint as a virtue in itself.",
+    "keyCharacteristics": [
+      "Light, airy surfaces — near-white paper (#f8f9fa) with pure white panels lifted on top",
+      "Depth exclusively from light-source shadow; borders removed wherever they would compete",
+      "Blue reserved for wayfinding: interaction, focus, and current state",
+      "One authored gradient (magenta → violet) as the brand's emotional signature",
+      "Native system typography, zero webfont requests, very wide weight range (300 → 700)",
+      "Every animation opt-out via prefers-reduced-motion, without exception",
+      "Generous vertical rhythm — sections breathe on my-5 py-5 stacks"
+    ],
+    "rules": [
+      {
+        "name": "The Wayfinding Rule",
+        "body": "Blue is reserved for interaction and current state. If an element is neither actionable nor a position marker, it is not blue. Adding blue for emphasis alone breaks the visitor's learned code and is the fastest way to make this page illegible.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Voice Rule",
+        "body": "Blue is the system's utility voice; the Heart Gradient is its emotional one. Blue says here is what you can do. The gradient says here is who this is. Never use one to do the other's job — a gradient focus ring or a blue hero flourish inverts the whole scheme.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ground-Panel Rule",
+        "body": "Content lives on white panels floating over the paper ground, never directly on the ground itself. The two-value separation (#f8f9fa under #ffffff) is what makes shadow read as elevation instead of as smudge.",
+        "section": "colors"
+      },
+      {
+        "name": "The Light-At-Scale Rule",
+        "body": "The bigger the type, the lighter it gets. display-2 runs at weight 300; body copy runs at 300; only names, titles, and labels go bold. Setting a display-* heading in 700 outside the hero name breaks the page's voice and makes it shout.",
+        "section": "typography"
+      },
+      {
+        "name": "The One-Name Rule",
+        "body": "display-1 appears exactly once, on Salvatore's name. Nothing else in the system may claim that size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Alternating Margin Rule",
+        "body": "Above 768px, consecutive experience entries alternate left and right alignment with their accent border on the outer edge. Below it, everything centers and the border moves underneath. A new entry must continue the alternation or the zigzag reads as a mistake.",
+        "section": "layout"
+      },
+      {
+        "name": "The Breathing Room Rule",
+        "body": "Sections get my-5 py-5. Tightening a section to fit more above the fold contradicts the page's whole posture — this design would rather be scrolled than crammed.",
+        "section": "layout"
+      },
+      {
+        "name": "The No-Border Rule",
+        "body": "Where a shadow describes an edge, a border must not also describe it. border-0 is applied deliberately on every card in this system; restoring a border to \"define\" a shadowed surface breaks the light model.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Paired-Shadow Rule",
+        "body": "Neumorphic surfaces always carry both halves — dark below-right and white above-left. A single-sided shadow on a dial is a bug, not a variant; the effect collapses without its highlight.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Ring Rule",
+        "body": "Circular geometry is the system's signature. New display elements should reach for a ring or pill before a rectangle, and any new rectangle needs a radius of at least rounded-3 (0.5rem).",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep Wayfinder Blue (#0d6efd) for interaction and current state only, per The Wayfinding Rule.",
+      "Do spread the Heart Gradient (#e91e63 → #673ab7) into CTAs, hero, and section accents. It is the brand's real signature and is currently confined to four dials — expanding it is sanctioned, not a risk.",
+      "Do build depth from paired light-and-dark shadows, and pass both halves to any new neumorphic surface.",
+      "Do give every new animation a prefers-reduced-motion opt-out. Every single one in this system has one; that consistency is a commitment, not a coincidence.",
+      "Do animate transform and opacity only. Where another property must animate, register it with @property as the back-to-top button does.",
+      "Do add any new interactive element to the cursor: pointer list in index.css — the global reset sets cursor: default on everything, so a new button feels dead until it is listed there.",
+      "Do set large headings light (300) and small labels bold (600–700), per The Light-At-Scale Rule.",
+      "Do give each new skill dial a unique <linearGradient> id, and update --cpb-radius, --cpb-circumference, and the SVG r together when changing ring geometry.",
+      "Do continue the left/right alternation when adding an experience entry.",
+      "Do keep local CSS as overrides layered after Bootstrap's CDN stylesheet — load order is load-bearing, and Bootstrap's JS bundle must stay at the bottom of <body>."
+    ],
+    "donts": [
+      "Don't add borders to shadowed surfaces. border-0 is deliberate on ten cards; a border collapses the light model.",
+      "Don't use a single-sided shadow on a neumorphic element. Without its white highlight the dial stops reading as an object.",
+      "Don't introduce a webfont. Zero font requests is a recorded decision tied to the no-build-step constraint, and the native stack lets the page speak each platform's own voice.",
+      "Don't set a display-* heading at weight 700 outside the hero name, and don't use display-1 for anything but the name.",
+      "Don't revert the back-to-top width animation to transition: width. The registered custom property exists specifically to avoid per-frame layout reflow.",
+      "Don't use sharp corners. Nothing in this system has a square corner; new rectangles need rounded-3 or softer.",
+      "Don't introduce hairline dividers to organize space. Vertical rhythm and elevation do that work, and the only line in the system is the 2px cyan experience accent.",
+      "Don't tighten section spacing below my-5 py-5 to fit more content above the fold.",
+      "Don't spend Signal Crimson freely. It appears about twice on the page; its scarcity is what makes it land.",
+      "Don't go dark-mode, brutalist, or minimal-anonymous. This is a bright, warm, earnest world, and its personality is the differentiator in a category of interchangeable portfolios."
+    ]
+  }
+}

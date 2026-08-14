@@ -18,6 +18,36 @@ summary {
   cursor: pointer;
 }
 
+/* Off-screen until focused, then it flies in over the navbar. Translating rather
+   than toggling display keeps it reachable by the very first Tab press. */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 1080;
+
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #212529;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  transform: translate(-50%, -100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.skip-link:focus-visible {
+  transform: translate(-50%, 0);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
+
 /* Anchor navigation scrolls smoothly instead of jumping between sections. */
 html {
   scroll-behavior: smooth;
@@ -34,4 +64,57 @@ html {
 :focus-visible {
   outline: 3px solid #0d6efd;
   outline-offset: 2px;
+}
+
+/* The CV download is a primary conversion, so it wears the Heart Gradient —
+   the only authored color in the system and, per DESIGN.md, deliberately not
+   rationed. These are the only gradient-filled controls on the page. */
+.btn-cv {
+  --btn-cv-lift: 0;
+
+  /* Same hue as the dials' #e91e63, one step deeper: white label text only reaches
+     4.35:1 on the lighter magenta, and 5.87:1 here. The rings keep the brighter
+     value because they carry no text. */
+  background-image: linear-gradient(135deg, #c2185b, #673ab7);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+
+  /* Offset + blur, so the lift reads as elevation rather than as a glow. */
+  box-shadow: 0 4px 14px -4px rgb(103 58 183 / 0.55);
+
+  transform: translateY(var(--btn-cv-lift));
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.btn-cv:hover,
+.btn-cv:focus-visible {
+  --btn-cv-lift: -2px;
+
+  color: #fff;
+  box-shadow: 0 10px 22px -6px rgb(103 58 183 / 0.65);
+}
+
+.btn-cv:active {
+  --btn-cv-lift: 0;
+}
+
+/* The locale reads as a quiet qualifier, not a second label competing with the verb. */
+.btn-cv-locale {
+  padding: 0.05em 0.45em;
+  border-radius: 50rem;
+  background-color: rgb(255 255 255 / 0.22);
+  font-size: 0.8em;
+  letter-spacing: 0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-cv {
+    transition: none;
+  }
+}
+
+/* Browser-owned surfaces still belong to the design. */
+::selection {
+  background-color: rgb(233 30 99 / 0.22);
 }

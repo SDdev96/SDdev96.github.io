@@ -6,15 +6,17 @@
 
     <meta
       name="description"
-      content="Portfolio of Salvatore D'Ambrosio — full-stack developer. Skills, experience, education and selected projects."
+      content="Portfolio of Salvatore D'Ambrosio — software & fullstack developer. Skills, experience and selected projects."
     />
     <meta name="theme-color" content="#212529" />
+
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Salvatore D'Ambrosio — Portfolio" />
     <meta
       property="og:description"
-      content="Portfolio of Salvatore D'Ambrosio — full-stack developer. Skills, experience, education and selected projects."
+      content="Portfolio of Salvatore D'Ambrosio — software & fullstack developer. Skills, experience and selected projects."
     />
     <meta property="og:image" content="./assets/img/foto-CV.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -72,6 +74,9 @@
     <title>Salvatore D'Ambrosio portfolio</title>
   </head>
   <body class="bg-light" style="overflow-x: hidden">
+    <!-- Keyboard users land here first and can jump the nav straight to content. -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md navbar-light fs-4">
       <div class="container-md">
@@ -121,8 +126,9 @@
       </script>
     </nav>
 
-    <!-- ABOUT ME -->
-    <section id="about-me">
+    <main id="main-content">
+      <!-- ABOUT ME -->
+      <section id="about-me">
       <div class="container-lg my-5 py-5">
         <!-- about me -->
         <div class="row justify-content-center align-items-center mb-5 pb-5">
@@ -142,7 +148,6 @@
               width="400"
               height="400"
               fetchpriority="high"
-              decoding="async"
             />
             <!-- </span> -->
           </div>
@@ -187,40 +192,37 @@
                 "May your heart be your guiding key"
               </p>
             </blockquote>
-            <div class="btn-group" role="group">
-              <button
-                type="button"
-                class="btn btn-outline-dark dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <!-- The CV download is one of two conversion outcomes, so it carries the
+                 brand gradient and full weight; Contacts is the secondary path.
+                 `download` matters: a recruiter needs to forward the file, not read
+                 it in a mobile PDF viewer. -->
+            <div
+              class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start"
+            >
+              <a
+                href="./assets/doc/Italy/salvatore-dambrosio-cv.pdf"
+                class="btn btn-cv"
+                download
               >
-                Download CV
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="./assets/doc/Italy/salvatore-dambrosio-cv.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Italian CV</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="./assets/doc/Switzerland/salvatore-dambrosio-cv.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Swiss CV</a
-                  >
-                </li>
-              </ul>
+                <i class="bi bi-download" aria-hidden="true"></i>
+                Download CV <span class="btn-cv-locale">IT</span>
+              </a>
+              <a
+                href="./assets/doc/Switzerland/salvatore-dambrosio-cv.pdf"
+                class="btn btn-cv"
+                download
+              >
+                <i class="bi bi-download" aria-hidden="true"></i>
+                Download CV <span class="btn-cv-locale">CH</span>
+              </a>
+              <a href="#contact" class="btn btn-outline-dark">
+                <i class="fa-solid fa-long-arrow-down" aria-hidden="true"></i>
+                Contacts
+              </a>
             </div>
-            <a href="#contact" class="btn btn-dark">
-              <i class="fa-solid fa-long-arrow-down"></i>
-              Contacts
-            </a>
+            <p class="text-muted mt-3 mb-0">
+              Italian and Swiss formats — I'm open to roles in both markets.
+            </p>
           </div>
         </div>
 
@@ -288,6 +290,9 @@
     <!-- SKILLS -->
     <section id="skills">
       <div class="container-lg my-5 py-5">
+        <h2 class="display-4 text-center mb-5">
+          Skills
+        </h2>
         <div class="container-lg shadow-lg bg-white rounded p-5">
           <!-- tecnical skills -->
           <div class="tecnical-skills pb-5">
@@ -350,7 +355,7 @@
                         aria-valuemax="100"
                         data-aos="fade-right"
                       >
-                        master
+                        95%
                       </div>
                     </div>
                   </div>
@@ -390,7 +395,7 @@
                         aria-valuemax="100"
                         data-aos="fade-right"
                       >
-                        advanced
+                        65%
                       </div>
                     </div>
                   </div>
@@ -428,7 +433,7 @@
                         aria-valuemax="100"
                         data-aos="fade-right"
                       >
-                        basic
+                        30%
                       </div>
                     </div>
                   </div>
@@ -701,7 +706,7 @@
                         ><img
                           src="./assets/img/micropython.svg"
                           width="20px"
-                          alt="java spring"
+                          alt="micropython"
                           loading="lazy"
                           decoding="async" /></i
                     ></span>
@@ -719,7 +724,7 @@
                         aria-valuemax="100"
                         data-aos="fade-right"
                       >
-                        advanced
+                        60%
                       </div>
                     </div>
                   </div>
@@ -782,7 +787,7 @@
                         aria-valuemax="100"
                         data-aos="fade-right"
                       >
-                        advanced
+                        70%
                       </div>
                     </div>
                   </div>
@@ -1080,6 +1085,8 @@
     <!-- EXPERIENCES -->
     <section id="experiences">
       <div id="experience" class="container-lg my-5 py-5">
+        <h2 class="display-4 text-center mb-5">Experience</h2>
+
         <!-- Scaling Parrots -->
         <div
           class="current-experience text-start ps-0 pb-5 mb-5 position-relative rounded-3"
@@ -1199,11 +1206,14 @@
             class="lead fw-light fs-3 px-3 px-md-3 me-md-5 border-md-end border-sm-bottom border-info border-2 text-md-end text-center"
           >
             Internship at <span class="fst-italic">Nexsoft</span>, located in
-            Salerno, as a software developer. My work involved implementing
-            Retrieval-Augmented Generation (RAG) systems using generative AI
-            models, while also contributing to the design of automatic
-            evaluation frameworks based on the "LLM as a Judge" approach to
-            assess and improve the performance of the developed RAG systems.
+            Salerno, as a software developer. I built
+            <span class="fw-semibold text-dark"
+              >Retrieval-Augmented Generation (RAG) systems</span
+            >
+            on generative AI models, and helped design automatic evaluation
+            frameworks using the
+            <span class="fw-semibold text-dark">"LLM as a Judge"</span>
+            approach to measure and improve how those systems performed.
           </p>
           <div
             class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-end px-3 px-md-5 mt-3"
@@ -1232,12 +1242,11 @@
           <p
             class="lead fw-light fs-3 px-3 px-md-3 me-md-5 border-md-end border-sm-bottom border-info border-2 text-md-end text-center"
           >
-            From July 2024 I started a new job experience at
+            From July 2024 I worked at
             <span class="fst-italic">T30 Web Agency</span>, based in Eboli (SA),
-            as a web developer. Here, My job is to develop websites for small
-            and large companies. I use Wordpress as CMS, Elementor as
-            page-builder, other plugins and widgets and custom code in HTML,
-            CSS, JS and PHP
+            as a web developer, building websites for small and large companies.
+            I used WordPress as CMS and Elementor as page-builder, alongside
+            plugins, widgets and custom code in HTML, CSS, JS and PHP.
           </p>
         </div>
 
@@ -1258,9 +1267,9 @@
           <p
             class="lead fw-light fs-3 px-3 px-md-3 ms-md-5 border-md-start border-sm-bottom border-info border-2 text-md-start text-center"
           >
-            In 2018 I started tutoring guys from middle school to university for
-            scientific subject such as math, physics and computer science. At
-            first at "Diversiamo", Salerno, then I kept on doing it privately.
+            From 2018 I tutored students from middle school to university in
+            scientific subjects such as maths, physics and computer science.
+            First at "Diversiamo" in Salerno, then privately.
           </p>
         </div>
       </div>
@@ -1269,7 +1278,9 @@
     <!-- PROJECTS -->
     <section id="projects">
       <div class="container-fluid my-5 py-5">
-        <h2 class="display-4 text-center mb-5">My Projects</h2>
+        <h2 class="display-4 text-center mb-5">
+          My Projects
+        </h2>
         <div class="swiper projectsSwiper">
           <div class="swiper-wrapper">
             <!-- progetto 1 -->
@@ -1287,8 +1298,16 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">REST API</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <a
+                      href="https://github.com/SDdev96/sito-recensioni-videogiochi"
+                      class="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the Videogame Reviews Site source code on GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      View source
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1308,8 +1327,9 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">REST API</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <span class="badge rounded-pill bg-secondary bg-opacity-25 text-secondary fw-normal">
+                      Source not public
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1329,8 +1349,16 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">PostgreSQL</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <a
+                      href="https://github.com/SDdev96/spiderman-home"
+                      class="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the Spiderman Home source code on GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      View source
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1350,8 +1378,16 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">SceneBuilder</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <a
+                      href="https://github.com/SDdev96/reportINGV"
+                      class="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the Report INGV source code on GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      View source
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1370,8 +1406,9 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">PgAdmin</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <span class="badge rounded-pill bg-secondary bg-opacity-25 text-secondary fw-normal">
+                      Source not public
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1389,8 +1426,16 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">Java</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <a
+                      href="https://github.com/SDdev96/sensorKit"
+                      class="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the SensorKit source code on GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      View source
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1410,8 +1455,16 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">Docker</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <a
+                      href="https://github.com/SDdev96/IntelliCurtain"
+                      class="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the IntelliCurtain source code on GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      View source
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1431,8 +1484,16 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">Swiper.js</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <a
+                      href="https://github.com/SDdev96/SDdev96.github.io"
+                      class="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the Portfolio Website source code on GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      View source
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1450,8 +1511,16 @@
                     <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary me-1">React.js</span>
                   </div>
                   <div class="card-actions">
-                    <a href="#" class="btn btn-outline-primary btn-sm disabled">Live Demo</a>
-                    <a href="#" class="btn btn-primary btn-sm">GitHub</a>
+                    <a
+                      href="https://github.com/SDdev96/Tenzies-Game"
+                      class="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View the Tenzies Game source code on GitHub"
+                    >
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      View source
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1466,26 +1535,56 @@
       </div>
     </section>
 
+    </main>
+
     <!-- CONTACT -->
     <footer id="contact" class="footer">
       <div class="container-lg mt-5 pt-5">
+        <h2 class="display-5 text-center mb-4">Let's talk</h2>
+
         <!-- personal -->
+        <!-- Phone and email are tappable: contact is one of two conversion
+             outcomes, and a recruiter on a phone should not transcribe digits. -->
         <div id="personal" class="text-center">
           <div class="row justify-content-center align-items-center">
             <div class="col lead">
-              <i class="bi bi-geo-alt"></i> Eboli (SA), Italy
+              <i class="bi bi-geo-alt" aria-hidden="true"></i> Eboli (SA), Italy
             </div>
           </div>
           <div class="row justify-content-center align-items-center">
             <div class="col lead">
-              <i class="bi bi-phone"></i>
-              +39 3384591601
+              <i class="bi bi-phone" aria-hidden="true"></i>
+              <a href="tel:+393384591601" class="link-dark">+39 338 459 1601</a>
             </div>
           </div>
           <div class="row justify-content-center align-items-center">
             <div class="col lead">
-              <i class="bi bi-envelope"></i> sd.io@hotmail.com
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <a href="mailto:sd.io@hotmail.com" class="link-dark"
+                >sd.io@hotmail.com</a
+              >
             </div>
+          </div>
+
+          <!-- The visitor who scrolled the whole page should not have to scroll
+               back to the hero to convert. -->
+          <div class="mt-4">
+            <a
+              href="./assets/doc/Italy/salvatore-dambrosio-cv.pdf"
+              class="btn btn-cv"
+              download
+            >
+              <i class="bi bi-download" aria-hidden="true"></i>
+              Download CV <span class="btn-cv-locale">IT</span>
+            </a>
+            <a
+              href="./assets/doc/Switzerland/salvatore-dambrosio-cv.pdf"
+              class="btn btn-cv"
+              download
+            >
+              <i class="bi bi-download" aria-hidden="true"></i>
+              Download CV <span class="btn-cv-locale">CH</span>
+            </a>
           </div>
         </div>
 
@@ -1494,14 +1593,14 @@
           <ul class="nav justify-content-center">
             <!-- facebook -->
             <li class="nav-item">
-              <a href="https://www.facebook.com/salvo9624" class="nav-link">
+              <a href="https://www.facebook.com/salvo9624" aria-label="Facebook" class="nav-link">
                 <!-- tooltip -->
                 <span
                   class="rounded-circle"
                   data-bs-placement="bottom"
                   data-bs-toggle="tooltip"
                   title="facebook"
-                  ><i class="bi bi-facebook"></i
+                  ><i class="bi bi-facebook" aria-hidden="true"></i
                 ></span>
               </a>
             </li>
@@ -1510,6 +1609,7 @@
               <a
                 href="https://www.instagram.com/salvatoredambrosio/"
                 class="nav-link"
+                aria-label="Instagram"
               >
                 <!-- tooltip -->
                 <span
@@ -1517,20 +1617,20 @@
                   data-bs-placement="bottom"
                   data-bs-toggle="tooltip"
                   title="instagram"
-                  ><i class="bi bi-instagram"></i
+                  ><i class="bi bi-instagram" aria-hidden="true"></i
                 ></span>
               </a>
             </li>
             <!-- github -->
             <li class="nav-item">
-              <a href="https://github.com/SDdev96" class="nav-link">
+              <a href="https://github.com/SDdev96" aria-label="GitHub" class="nav-link">
                 <!-- tooltip -->
                 <span
                   class="rounded-circle"
                   data-bs-placement="bottom"
                   data-bs-toggle="tooltip"
                   title="github"
-                  ><i class="bi bi-github"></i
+                  ><i class="bi bi-github" aria-hidden="true"></i
                 ></span>
               </a>
             </li>
@@ -1539,6 +1639,7 @@
               <a
                 href="https://www.linkedin.com/in/salvatore-d-ambrosio-2b6bb227a/"
                 class="nav-link"
+                aria-label="LinkedIn"
               >
                 <!-- tooltip -->
                 <span
@@ -1546,7 +1647,7 @@
                   data-bs-placement="bottom"
                   data-bs-toggle="tooltip"
                   title="linkedin"
-                  ><i class="bi bi-linkedin"></i
+                  ><i class="bi bi-linkedin" aria-hidden="true"></i
                 ></span>
               </a>
             </li>
@@ -1562,11 +1663,8 @@
         <!-- rights -->
         <div class="text-small text-center pb-4">
           <small class="text-muted"
-            >™ & ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            Tutti i diritti riservati.</small
+            >&copy; <span id="year"></span> Salvatore D'Ambrosio. All rights
+            reserved.</small
           >
         </div>
 
@@ -1579,8 +1677,8 @@
 
     <!-- BACK-TO-TOP BUTTON -->
     <div id="btt">
-      <button id="back-to-top" class="button shadow-lg">
-        <svg viewBox="0 0 384 512" class="svgIcon">
+      <button id="back-to-top" class="button shadow-lg" aria-label="Back to top">
+        <svg viewBox="0 0 384 512" class="svgIcon" aria-hidden="true" focusable="false">
           <path
             d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
           ></path>
@@ -1622,6 +1720,13 @@
       document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
         new bootstrap.Tooltip(el);
       });
+    </script>
+
+    <!-- COPYRIGHT YEAR -->
+    <script>
+      // A targeted textContent write; document.write() would block the parser
+      // and blank the document if it ever ran after load.
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
     <!-- AOS ANIMATION -->
