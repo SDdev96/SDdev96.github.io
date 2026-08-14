@@ -10,11 +10,15 @@
 }
 
 .cpb-skill {
+  /* Single source of truth for the ring geometry. cpb.js reads --cpb-circumference
+     at runtime, so changing the radius here keeps CSS and JS in sync automatically. */
+  --cpb-radius: 70;
+  --cpb-circumference: 439.82; /* 2 * pi * 70 */
+
   position: relative;
 
   width: 160px;
   height: 160px;
-  /* border: 1px solid red; */
 }
 
 .cpb-outer {
@@ -26,8 +30,8 @@
 
   /* border: 1px solid red; */
 
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  box-shadow: 6px 6px 10px -1px rgb(0 0 0 / 0.15),
+    -6px -6px 10px -1px rgb(255 255 255 / 0.7);
 }
 
 .cpb-inner {
@@ -42,10 +46,10 @@
 
   /* border: 1px solid black; */
 
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 4px 4px 6px -1px rgb(0 0 0 / 0.2),
+    inset -4px -4px 6px -1px rgb(255 255 255 / 0.7),
+    -0.5px -0.5px 0px rgb(255 255 255 / 1),
+    0.5px 0.5px 0px rgb(0 0 0 / 0.15), 0px 12px 10px -10px rgb(0 0 0 / 0.05);
 }
 
 .cpb-number {
@@ -59,16 +63,18 @@
   /* border: 1px solid black; */
 }
 
-#svg {
+.cpb-svg {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-circle {
+/* Scoped to the widget: a bare `circle` selector would style every SVG on the page.
+   The gradient is set per-instance via stroke="url(#GradientColorN)" in the markup,
+   because each widget needs its own <linearGradient> id to be valid HTML. */
+.cpb-skill circle {
   fill: none;
-  stroke: url(#GradientColor);
   stroke-width: 20px;
-  stroke-dasharray: 472; /*complete circle*/
-  stroke-dashoffset: 472; /*this will animate the circle*/
+  stroke-dasharray: var(--cpb-circumference); /*complete circle*/
+  stroke-dashoffset: var(--cpb-circumference); /*this will animate the circle*/
 }

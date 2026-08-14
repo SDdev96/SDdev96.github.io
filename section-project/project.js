@@ -1,12 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".projectsSwiper", {
+document.addEventListener("DOMContentLoaded", () => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  new Swiper(".projectsSwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
     initialSlide: 0,
     loop: true,
-    speed: 600,
+    speed: prefersReducedMotion ? 0 : 600,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
@@ -14,11 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
       modifier: 2,
       slideShadows: false,
     },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
+    // Auto-advancing carousels are hostile to users who need more reading time,
+    // so the rotation is disabled when the OS asks for reduced motion.
+    autoplay: prefersReducedMotion
+      ? false
+      : {
+          delay: 4000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

@@ -1,138 +1,131 @@
 /**
- * Codice per la gestione delle animazioni dei grafici circolari delle skill
- * Questo script si attiva quando il DOM è completamente caricato
+ * Animazione dei grafici circolari delle skill (circular progress bars).
+ *
+ * Ogni widget `.cpb-skill` contiene un `.cpb-number` con:
+ *   - data-cpb-value    -> percentuale finale (0-100)
+ *   - data-cpb-duration -> durata dell'animazione in ms (opzionale)
+ *
+ * L'animazione parte quando il widget entra nel viewport e si riavvolge
+ * quando esce dal basso, così viene rigiocata allo scroll di ritorno.
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleziona tutti gli elementi con classe 'cpb-skill' (i contenitori delle skill)
-  const skills = document.querySelectorAll(".cpb-skill");
+  const skills = Array.from(document.querySelectorAll(".cpb-skill"));
+  if (skills.length === 0) return;
 
-  // Inizializza tutti i contatori delle skill a '0%'
-  Array.from(skills).forEach((el) => {
-    el.querySelector(".cpb-number").innerText = "0%";
+  const DEFAULT_DURATION_MS = 1200;
+
+  // Rispetta la preferenza di sistema per le animazioni ridotte.
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  /** Stato per widget: valore target, durata, progresso corrente e handle rAF. */
+  const states = skills.map((skill) => {
+    const numberEl = skill.querySelector(".cpb-number");
+    const circleEl = skill.querySelector("circle");
+
+    // La circonferenza vive nel CSS (--cpb-circumference): un'unica fonte di verità
+    // condivisa fra il tratteggio SVG e il calcolo dell'offset qui sotto.
+    const circumference =
+      parseFloat(
+        getComputedStyle(skill).getPropertyValue("--cpb-circumference")
+      ) || 439.82;
+
+    return {
+      numberEl,
+      circleEl,
+      circumference,
+      target: Number(numberEl?.dataset.cpbValue) || 0,
+      duration: Number(numberEl?.dataset.cpbDuration) || DEFAULT_DURATION_MS,
+      current: 0,
+      frameId: null,
+    };
   });
 
-  // Estrae i valori delle skill dagli attributi data-cpb-value
-  const values = Array.from(skills).map((el) =>
-    parseInt(el.querySelector(".cpb-number").dataset.cpbValue)
-  );
-  
-  // Estrae le durate delle animazioni dagli attributi data-cpb-duration
-  const durations = Array.from(skills).map((el) =>
-    parseInt(el.querySelector(".cpb-number").dataset.cpbDuration) || 10 // Default a 10ms per tutti se non specificato
-  );
-  
-  // Inizializza i contatori per ogni skill a 0
-  const counters = Array.from(skills).map(() => 0);
-  
-  // Mappa per tenere traccia degli ID degli intervalli di animazione
-  const intervalIds = new Map();
+  /** Disegna un valore (0-100) sul widget: testo percentuale + riempimento del cerchio. */
+  const render = (state, value) => {
+    const { numberEl, circleEl, circumference } = state;
+
+    if (numberEl) {
+      numberEl.textContent = `${Math.round(value)}%`;
+    }
+    if (circleEl) {
+      // A 0% l'offset copre l'intera circonferenza, a 100% si azzera (cerchio chiuso).
+      circleEl.style.strokeDashoffset = String(
+        circumference - (circumference / 100) * value
+      );
+    }
+  };
 
   /**
-   * Avvia l'animazione in avanti per la skill specificata
-   * @param {number} index - L'indice della skill nell'array skills
+   * Anima il widget dal valore corrente a `to` con un'interpolazione temporale.
+   * Usa requestAnimationFrame invece di setInterval: si sincronizza col refresh
+   * dello schermo, non accumula drift e si mette in pausa a tab nascosta.
    */
-  const animateForward = (index) => {
-    // Se c'è già un'animazione in corso per questa skill, esci
-    if (intervalIds.has(index)) return;
+  const animateTo = (state, to) => {
+    if (state.frameId !== null) {
+      cancelAnimationFrame(state.frameId);
+      state.frameId = null;
+    }
 
-    // Calcola l'intervallo di tempo tra gli aggiornamenti per un'animazione fluida
-    const intervalTime = (durations[index] * 50) / values[index];
-    
-    const intervalId = setInterval(() => {
-      if (counters[index] >= values[index]) {
-        // Se abbiamo raggiunto il valore massimo, pulisci l'intervallo
-        clearInterval(intervalId);
-        intervalIds.delete(index);
+    const from = state.current;
+    const delta = to - from;
+    if (delta === 0) return;
+
+    if (prefersReducedMotion) {
+      state.current = to;
+      render(state, to);
+      return;
+    }
+
+    // La durata dichiarata copre 0 -> 100; una tratta parziale dura in proporzione.
+    const span = (Math.abs(delta) / 100) * state.duration;
+    let startTime = null;
+
+    const step = (timestamp) => {
+      if (startTime === null) startTime = timestamp;
+
+      const progress = span === 0 ? 1 : Math.min((timestamp - startTime) / span, 1);
+      // Ease-out cubica: parte veloce e si assesta dolcemente sul valore finale.
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      state.current = from + delta * eased;
+      render(state, state.current);
+
+      if (progress < 1) {
+        state.frameId = requestAnimationFrame(step);
       } else {
-        // Altrimenti incrementa il contatore e aggiorna l'UI
-        counters[index]++;
-        updateUI(index, counters[index]);
+        state.current = to;
+        state.frameId = null;
       }
-    }, intervalTime);
+    };
 
-    // Salva l'ID dell'intervallo per riferimento futuro
-    intervalIds.set(index, intervalId);
+    state.frameId = requestAnimationFrame(step);
   };
 
-  /**
-   * Avvia l'animazione all'indietro per la skill specificata
-   * @param {number} index - L'indice della skill nell'array skills
-   */
-  const animateBackward = (index) => {
-    // Se c'è già un'animazione in corso per questa skill, esci
-    if (intervalIds.has(index)) return;
+  // Stato iniziale: tutti i contatori a zero e cerchi vuoti.
+  states.forEach((state) => render(state, 0));
 
-    // Calcola l'intervallo di tempo tra gli aggiornamenti per un'animazione fluida
-    const intervalTime = (durations[index] * 50) / values[index];
-    
-    const intervalId = setInterval(() => {
-      if (counters[index] <= 0) {
-        // Se siamo tornati a zero, pulisci l'intervallo
-        clearInterval(intervalId);
-        intervalIds.delete(index);
-      } else {
-        // Altrimenti decrementa il contatore e aggiorna l'UI
-        counters[index]--;
-        updateUI(index, counters[index]);
-      }
-    }, intervalTime);
-
-    // Salva l'ID dell'intervallo per riferimento futuro
-    intervalIds.set(index, intervalId);
-  };
-
-  /**
-   * Aggiorna l'interfaccia utente per una specifica skill
-   * @param {number} index - L'indice della skill da aggiornare
-   * @param {number} value - Il nuovo valore da visualizzare
-   */
-  const updateUI = (index, value) => {
-    const skill = skills[index];
-    const numberElement = skill.querySelector(".cpb-number");
-    const circle = skill.querySelector("circle");
-
-    // Aggiorna il testo della percentuale
-    numberElement.innerText = value + "%";
-    
-    // Calcola e applica l'offset del tratto per l'effetto di riempimento del cerchio
-    // 472 è la circonferenza approssimativa del cerchio (2 * π * raggio)
-    const strokeDashoffset = 500 - (472 / 100) * value;
-    circle.style.strokeDashoffset = strokeDashoffset;
-  };
-
-  // Crea un IntersectionObserver per rilevare quando le skill entrano/escono dalla viewport
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        // Trova l'indice della skill corrente nell'array skills
-        const index = Array.from(skills).indexOf(entry.target);
+        const index = skills.indexOf(entry.target);
+        if (index === -1) return;
 
-        if (entry.isIntersecting && entry.intersectionRatio === 1) {
-          // Se la skill è completamente visibile nella viewport, avvia l'animazione in avanti
-          animateForward(index);
-        } else if (
-          !entry.isIntersecting &&
-          entry.boundingClientRect.bottom > window.innerHeight
-        ) {
-          // Se la skill è uscita dalla viewport verso il basso, avvia l'animazione all'indietro
-          animateBackward(index);
+        const state = states[index];
+
+        if (entry.isIntersecting) {
+          animateTo(state, state.target);
+        } else if (entry.boundingClientRect.top > 0) {
+          // Uscito dal viewport verso il basso: riavvolgi per rigiocarlo al ritorno.
+          animateTo(state, 0);
         }
       });
     },
-    {
-      // Soglie di intersezione: 0.5 (50% visibile) e 1 (100% visibile)
-      threshold: [0.1, 1],
-    }
+    // 0.35 fa partire l'animazione quando il widget è chiaramente visibile,
+    // senza pretendere che sia interamente a schermo (irraggiungibile su mobile).
+    { threshold: 0.35 }
   );
 
-  // Inizia a osservare ogni elemento skill
   skills.forEach((skill) => observer.observe(skill));
-
-  // Inizializza lo stile dei cerchi
-  const circles = document.querySelectorAll("circle");
-  circles.forEach((circle) => {
-    // Imposta la lunghezza del tratto e nasconde inizialmente il cerchio
-    circle.style.strokeDasharray = "472";
-    circle.style.strokeDashoffset = "472";
-  });
 });

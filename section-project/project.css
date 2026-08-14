@@ -7,29 +7,28 @@
 /* Swiper Slide */
 .projectsSwiper .swiper-slide {
   width: 400px;
-  transition: all 0.4s ease;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .projectsSwiper .swiper-slide {
     width: 300px;
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .projectsSwiper .swiper-slide {
     width: 260px;
   }
 }
 
-/* Card styling */
+/* Card styling — only compositor-friendly properties are animated. */
 .projectsSwiper .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
 .projectsSwiper .swiper-slide-active .card {
   transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 20px 40px rgb(0 0 0 / 0.15) !important;
 }
 
 .projectsSwiper .swiper-slide:not(.swiper-slide-active) .card {
@@ -41,12 +40,12 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: #0d6efd;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgb(255 255 255 / 0.9);
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .swiper-button-next:hover,
@@ -83,13 +82,13 @@
   height: 200px;
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   .card-image {
     height: 220px;
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .card-image {
     height: 150px;
   }
@@ -128,9 +127,18 @@
 }
 
 /* Hide navigation on mobile */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projectsSwiper .card,
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-pagination-bullet {
+    transition: none;
   }
 }

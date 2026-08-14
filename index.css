@@ -10,6 +10,28 @@
 .navbar-nav > li > a,
 .dropdown-item,
 .nav > li > a > span > i::before,
-a > i::before {
+a > i::before,
+a,
+button,
+[role="button"],
+summary {
   cursor: pointer;
+}
+
+/* Anchor navigation scrolls smoothly instead of jumping between sections. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Keyboard users need a visible focus ring; the global reset above must not
+   leave them without one. :focus-visible keeps it off for mouse clicks. */
+:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
 }

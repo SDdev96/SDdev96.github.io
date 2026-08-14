@@ -1,15 +1,15 @@
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .border-md-end {
-    border-right: solid;
+    border-right: 1px solid;
   }
   .border-md-start {
-    border-left: solid;
+    border-left: 1px solid;
   }
 }
 
-@media (max-width: 767px) {
+@media (width < 768px) {
   .border-sm-bottom {
-    border-bottom: solid;
+    border-bottom: 1px solid;
   }
 }
 
@@ -20,12 +20,20 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+    box-shadow: 0 0 0 0 rgb(13 110 253 / 0.4);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
+    box-shadow: 0 0 0 10px rgb(13 110 253 / 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+    box-shadow: 0 0 0 0 rgb(13 110 253 / 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .current-experience {
+    animation: none;
+    /* Keep the highlight visible without the looping pulse. */
+    box-shadow: 0 0 0 3px rgb(13 110 253 / 0.4);
   }
 }
